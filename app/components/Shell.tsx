@@ -9,6 +9,7 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
+  AspectRatio,
 } from '@mantine/core';
 
 import bg from '~/assets/OldTimey.jpg'
@@ -40,18 +41,9 @@ export default function AppShellDemo({children}: any) {
           </Link>
         </Navbar>
       }
-      aside={
-        <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-          <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
-            <Text >Application sidebar</Text>
-          </Aside>
-        </MediaQuery>
-      }
-      footer={
-        <Footer height={60} p="md">
-          Application footer
-        </Footer>
-      }
+  
+      
+      
       header={
         <Header height={70} p="md">
           <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
@@ -75,15 +67,20 @@ export default function AppShellDemo({children}: any) {
              * shell children styles here
              */
         }
+         <AspectRatio ratio={720 / 1080} sx={{ maxWidth: 300 }} mx="auto">
+  
         <div style={{  
-  backgroundImage: "url(" + bg + ")",
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat'
-}}>
+            height: '90vh',
+            width: '90vw',
+            backgroundImage: "url(" + bg + ")",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+        }}>
 
      {children}
   </div>  
+    </AspectRatio>
     </AppShell>
   );
 }

@@ -1,10 +1,12 @@
 import React from 'react'
+import GlassCard from '~/components/GlassCard'
 
 type Props = {}
 
 function index({}: Props) {
   return (
-    <div>Hello</div>
+    
+    <GlassCard/>
   )
 }
 
