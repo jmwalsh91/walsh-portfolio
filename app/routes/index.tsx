@@ -1,11 +1,30 @@
-import { Button, Slider, ThemeIcon, useMantineTheme } from "@mantine/core";
+import { Button, Slider, ThemeIcon, Title, useMantineTheme, Text, Container, Space, Paper, Stack } from "@mantine/core";
 import Nav from "~/components/Nav";
 
 export default function Index() {
   const theme = useMantineTheme()
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <Button color="accent">Hi</Button>
+<Container>
+  <Paper p={30}
+  sx={{
+    width: "350px",
+    background:
+      "linear-gradient(70.46deg, rgba(116, 255, 255, 0.375) 12.34%, rgba(117, 164, 164, 0.75) 54.81%, rgba(250, 244, 194, 0.345) 93.35%)",
+    backdropFilter: "blur(9px)",
+    borderRadius: "26px",
+    border: '2px solid black'
+  }}
+  shadow={"md"}>
+<Title order={1} sx={{color: theme.colors.accent[5]}}>Jordan Walsh Portfolio</Title>
+<Space h="md"/>
+<Text>Hi</Text>
+<Stack>
+
+      <Button>Primary</Button>
+      <Button color="secondary" m={6}> secondary</Button>
+      <Button color="accent">Accent</Button>
+      <Button color="success">Success</Button>
+      </Stack>
       <Slider
       sx={{width: '300px'}}
       color={"secondary"}
@@ -15,6 +34,7 @@ export default function Index() {
         { value: 80, label: '80%' },
       ]}
     />
-    </div>
+ </Paper>
+ </Container>
   );
 }

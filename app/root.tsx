@@ -11,6 +11,7 @@ import {
 } from "@remix-run/react";
 import { useState } from "react";
 import Shell from "./components/Shell";
+import FontLoader from "./utils/loaders/FontLoader";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -50,8 +51,12 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
       colorScheme={colorScheme}
       toggleColorScheme={toggleColorScheme}
     >
+      <FontLoader/> 
       <MantineProvider
         theme={{
+          headings: {
+            fontFamily: 'Smoking Typeface'
+          },
           colorScheme: colorScheme,
           colors: {
             'primary': [
@@ -104,10 +109,13 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
             ],
          
           },
+          other: {
+            accent: "#ffd11a",
+          },
           primaryColor: 'primary',
-          primaryShade: 5
-          
+          primaryShade: 5,
         }}
+        
         withNormalizeCSS
         withGlobalStyles
       >
