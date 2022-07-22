@@ -27,7 +27,9 @@ export default function App() {
       </head>
       <body>
         <MantineTheme>
-          <Outlet />
+          <Shell>
+            <Outlet />
+          </Shell>
         </MantineTheme>
 
         <ScrollRestoration />
@@ -49,11 +51,29 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
       toggleColorScheme={toggleColorScheme}
     >
       <MantineProvider
-        theme={{ colorScheme }}
+        theme={{
+          colorScheme: colorScheme,
+          colors: {
+            'primary':  [
+                "#defdfd",
+                "#bbf2f1",
+                "#95e7e7",
+                "#6ededd",
+                "#49d4d3",
+                "#31bbb9",
+                "#219190",
+                "#136867",
+                "#003f3f",
+                "#001717",
+              ],
+          },
+        }}
         withNormalizeCSS
         withGlobalStyles
       >
-        <Shell><Outlet/></Shell>
+        <Shell>
+          <Outlet />
+        </Shell>
       </MantineProvider>
     </ColorSchemeProvider>
   );
