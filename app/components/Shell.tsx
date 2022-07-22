@@ -57,7 +57,7 @@ export default function AppShellDemo({children}: any) {
               />
             </MediaQuery>
 
-            <Text>Application header</Text>
+            <Text>Jordan Walsh Portfolio</Text>
           </div>
         </Header>
       }
@@ -67,7 +67,7 @@ export default function AppShellDemo({children}: any) {
              * shell children styles here
              */
         }
-         <AspectRatio ratio={720 / 1080} sx={{ maxWidth: 300 }} mx="auto">
+         <AspectRatio ratio={720 / 1080} sx={{ maxWidth: '90vw' }} mx="auto">
   
         <div style={{  
             height: '90vh',
