@@ -5,10 +5,10 @@ export default function Index() {
   const theme = useMantineTheme()
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <Button color={theme.colors.primary[5]}>Hi</Button>
+      <Button color="accent">Hi</Button>
       <Slider
       sx={{width: '300px'}}
-      color={theme.colors.blue[0]}
+      color={"secondary"}
       marks={[
         { value: 20, label: '20%' },
         { value: 50, label: '50%' },
