@@ -1,17 +1,23 @@
+import { Center, Container } from '@mantine/core'
 import React from 'react'
 import { ImageActionBanner } from '~/components/ImageActionBanner'
-
+import portrait from '~/assets/bluepinkportrait.jpg'
 type Props = {}
 
 function index({}: Props) {
   return (
-    <div>
-        <ImageActionBanner title={'blog'} description={'blog'} image={''} action={{
-              label: '',
-              link: ''
-          }}/>
+    <Container>
+
+    <Center>
+        <ImageActionBanner sx={{
+            width: '600px'
+        }} title={'blog'} description={'blog'} image={portrait} action={{
+            label: '',
+            link: ''
+        }}/>
     <div>This blog</div>
-    </div>
+    </Center>
+        </Container>
   )
 }
 

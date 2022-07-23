@@ -10,9 +10,11 @@ import {
   Burger,
   useMantineTheme,
   AspectRatio,
+  ScrollArea,
+  Center,
 } from '@mantine/core';
 
-import bg from '~/assets/OldTimey.jpg'
+import bg from '~/assets/CloudBG.jpg'
 import { Link } from '@remix-run/react';
 export default function AppShellDemo({children}: any) {
   const theme = useMantineTheme();
@@ -46,7 +48,7 @@ export default function AppShellDemo({children}: any) {
       
       header={
         <Header height={70} p="md">
-          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+          <div style={{ position: 'absolute', display: 'flex', alignItems: 'center', height: '100%' }}>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
                 opened={opened}
@@ -67,20 +69,30 @@ export default function AppShellDemo({children}: any) {
              * shell children styles here
              */
         }
-         <AspectRatio ratio={720 / 1080} sx={{ maxWidth: '90vw' }} mx="auto">
-  
-        <div style={{  
-            height: '90vh',
-            width: '90vw',
+      <div
+      style={{  
+        overflow: 'none'}}
+        >
+
+  <ScrollArea sx={{height: '100vh'}}>
+
+        <div style={{
+            minHeight: '200vh',
+            width: '100vw',
+            backgroundAttachment: 'fixed',
             backgroundImage: "url(" + bg + ")",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }}>
+<Center>
 
      {children}
+</Center>
   </div>  
-    </AspectRatio>
+            </ScrollArea>
+            </div>
+ 
     </AppShell>
   );
 }

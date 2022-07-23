@@ -119,7 +119,7 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
         withNormalizeCSS
         withGlobalStyles
       >
-        <Shell>
+        <Shell fixed position={{ top: 0, left: 0 }}>
           <Outlet />
         </Shell>
       </MantineProvider>
