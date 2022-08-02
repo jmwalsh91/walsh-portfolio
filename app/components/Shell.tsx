@@ -22,7 +22,7 @@ export default function AppShellDemo({children}: any) {
   const [opened, setOpened] = useState(false);
   return (
     <AppShell
-    fixed={true}
+    fixed={false}
       styles={{
         main: {
           background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
@@ -45,22 +45,14 @@ export default function AppShellDemo({children}: any) {
         overflow: 'none'}}
         >
 
-  <ScrollArea sx={{height: '100vh'}}>
+  <ScrollArea sx={{height: '100vh', width: "90vw"}}>
 
-        <div style={{
-            minHeight: '200vh',
-            width: '100vw',
-            backgroundAttachment: 'fixed',
-            backgroundImage: "url(" + bg + ")",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-        }}>
+
 <Center>
 
      {children}
 </Center>
-  </div>  
+ 
             </ScrollArea>
             </div>
  

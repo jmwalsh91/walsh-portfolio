@@ -11,13 +11,14 @@ import {
   IconSettings,
   IconLogout,
   IconSwitchHorizontal,
+  IconPencil,
 } from '@tabler/icons';
 
 
 const useStyles = createStyles((theme) => ({
   link: {
-    width: 50,
-    height: 50,
+    width: '4rem',
+    height: '4rem',
     borderRadius: theme.radius.md,
     display: 'flex',
     alignItems: 'center',
@@ -28,7 +29,7 @@ const useStyles = createStyles((theme) => ({
     '&:hover': {
       opacity: 1,
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.colors.indigo[5] }).background,
         0.1
       ),
     },
@@ -63,18 +64,20 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   );
 }
 
-const mockdata = [
+const pages = [
   { icon: IconHome2, label: 'Home' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: IconCalendarStats, label: 'Releases' },
-  { icon: IconUser, label: 'Account' },
+  { icon: IconDeviceDesktopAnalytics, label: 'Projects' },
+  { icon: IconPencil, label: 'Blog'},
+  { icon: IconCalendarStats, label: 'Calendar' },
+  { icon: IconUser, label: 'About' },
 ];
 
 export default function Nav() {
   const [active, setActive] = useState(2);
 
-  const links = mockdata.map((link, index) => (
+  const links = pages.map((link, index) => (
     <NavbarLink
+      
       {...link}
       key={link.label}
       active={index === active}
@@ -87,12 +90,6 @@ export default function Nav() {
       <Navbar.Section grow mt={50}>
         <Stack justify="center" spacing={0}>
           {links}
-        </Stack>
-      </Navbar.Section>
-      <Navbar.Section>
-        <Stack justify="center" spacing={0}>
-          <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
-          <NavbarLink icon={IconLogout} label="Logout" />
         </Stack>
       </Navbar.Section>
   </>
