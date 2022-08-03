@@ -1,9 +1,6 @@
+import { MantineThemeOverride } from "@mantine/core"
 import { useColorScheme } from "@mantine/hooks"
-export const theme= {
-    headings: {
-      fontFamily: 'Smoking Typeface'
-    },
-    colorScheme: useColorScheme,
+export const theme: MantineThemeOverride = {
     colors: {
       'primary': [
         "#defdfd",

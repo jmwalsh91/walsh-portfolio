@@ -1,3 +1,7 @@
+import { MantineProvider } from "@mantine/core"
+import {theme} from "../app/styles/theme.tsx"
+
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +11,12 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  (Story) => (
+    <MantineProvider
+    theme={theme}>
+      <Story />
+    </MantineProvider>
+  )
+]

@@ -11,8 +11,9 @@ import {
 } from "@remix-run/react";
 import { useState } from "react";
 import Shell from "./components/Shell";
-import FontLoader from "./utils/loaders/FontLoader";
 import { theme } from "./styles/theme";
+import FontLoader from "./utils/loaders/FontLoader";
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",

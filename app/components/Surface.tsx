@@ -14,7 +14,7 @@ function Surface({}: Props) {
         width: "450px",
         height: "450px",
         borderRadius: "14px"
-    }}><Text color={'dimmed'}>Surface</Text>Surface</Paper>
+    }}><Text color={theme.colors.secondary[5]}>Surface</Text>Surface</Paper>
   )
 }
 
