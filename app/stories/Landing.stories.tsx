@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Surface from '../app/components/Surface'
+import Surface from '../components/Surface'
 
 export default {
   /* 👇 The title prop is optional.
