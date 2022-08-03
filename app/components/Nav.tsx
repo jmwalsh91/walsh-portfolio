@@ -13,6 +13,7 @@ import {
   IconSwitchHorizontal,
   IconPencil,
 } from '@tabler/icons';
+import { useNavigate } from '@remix-run/react';
 
 
 const useStyles = createStyles((theme) => ({
@@ -67,21 +68,25 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 const pages = [
   { icon: IconHome2, label: 'Home' },
   { icon: IconDeviceDesktopAnalytics, label: 'Projects' },
-  { icon: IconPencil, label: 'Blog'},
+  { icon: IconPencil, label: 'blog'},
   { icon: IconCalendarStats, label: 'Calendar' },
   { icon: IconUser, label: 'About' },
 ];
 
+
 export default function Nav() {
   const [active, setActive] = useState(2);
-
+  const navigate = useNavigate()
+  function handleNav(index: number) {
+    setActive(index)
+    navigate(`${pages[index].label}`)
+  }
   const links = pages.map((link, index) => (
     <NavbarLink
-      
       {...link}
       key={link.label}
       active={index === active}
-      onClick={() => setActive(index)}
+      onClick={() => handleNav(index)}
     />
   ));
 
