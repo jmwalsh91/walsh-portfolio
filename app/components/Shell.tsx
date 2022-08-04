@@ -16,80 +16,39 @@ import {
 
 import bg from '~/assets/CloudBG.jpg'
 import { Link } from '@remix-run/react';
+import Nav from './Nav';
 export default function AppShellDemo({children}: any) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   return (
     <AppShell
+    fixed={false}
       styles={{
         main: {
-          background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+          background: 'rgb(19,17,28)',
+          backgroundImage:'linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), none'
         },
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
-      fixed
+   
       navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
-          <Text>Application navbar</Text>
-          <Link to="/">
-            Home
-          </Link>
-          <Link to="projects">
-            Projects
-          </Link>
-          <Link to="blog">
-            Blog
-          </Link>
-        </Navbar>
-      }
-  
-      
-      
-      header={
-        <Header height={70} p="md">
-          <div style={{ position: 'absolute', display: 'flex', alignItems: 'center', height: '100%' }}>
-            <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-              <Burger
-                opened={opened}
-                onClick={() => setOpened((o) => !o)}
-                size="sm"
-                color={theme.colors.gray[6]}
-                mr="xl"
-              />
-            </MediaQuery>
-
-            <Text>Jordan Walsh Portfolio</Text>
-          </div>
-        </Header>
+        <Nav/>
       }
     >
-        {
-            /**
-             * shell children styles here
-             */
-        }
       <div
       style={{  
         overflow: 'none'}}
         >
 
-  <ScrollArea sx={{height: '100vh'}}>
+  <ScrollArea sx={{height: '100vh', width: "90vw"}}>
 
-        <div style={{
-            minHeight: '200vh',
-            width: '100vw',
-            backgroundAttachment: 'fixed',
-            backgroundImage: "url(" + bg + ")",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-        }}>
+
 <Center>
 
      {children}
 </Center>
-  </div>  
+ 
             </ScrollArea>
             </div>
  

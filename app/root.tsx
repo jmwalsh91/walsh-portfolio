@@ -26,7 +26,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{overflowY: 'hidden'}}>
         <MantineTheme>
           <Shell>
             <Outlet />
@@ -54,9 +54,6 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
       <FontLoader/> 
       <MantineProvider
         theme={{
-          headings: {
-            fontFamily: 'Smoking Typeface'
-          },
           colorScheme: colorScheme,
           colors: {
             'primary': [

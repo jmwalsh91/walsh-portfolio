@@ -1,6 +1,6 @@
 import { Button, Slider, ThemeIcon, Title, useMantineTheme, Text, Container, Space, Paper, Stack, Center } from "@mantine/core";
 import { motion } from "framer-motion";
-import Nav from "~/components/Nav";
+
 import cloud from "~/assets/cloud1.png"
 export default function Index() {
   const theme = useMantineTheme()
