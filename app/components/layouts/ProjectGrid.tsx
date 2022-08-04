@@ -1,5 +1,6 @@
 import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme } from '@mantine/core'
 import React from 'react'
+import { LeadingProject } from '../cards/LeadingProject';
 
 type Props = {}
 const PRIMARY_COL_HEIGHT = 360;
@@ -9,7 +10,8 @@ function ProjectGrid({}: Props) {
   return (
     <Container my="md">
     <SimpleGrid cols={2} spacing="md" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-      <Skeleton height={PRIMARY_COL_HEIGHT} width="20rem"  radius="md" animate={true} />
+<LeadingProject title="cryptones" image={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrO7PqNNqAc39QGOWVqWFAiRPmvJn3iw76Lw&usqp=CAU'} category={'NFT'} description="Unique compositions generated from cryptocurrency price data"/>
+      {/* <Skeleton height={PRIMARY_COL_HEIGHT} width="20rem"  radius="md" animate={true} /> */}
       <Grid gutter="md">
         <Grid.Col>
           <Skeleton height={SECONDARY_COL_HEIGHT} width="20rem" radius="md" animate={true} />

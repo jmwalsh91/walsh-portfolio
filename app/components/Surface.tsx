@@ -1,7 +1,8 @@
-import { Paper, Text, ThemeIcon, Title, useMantineTheme } from "@mantine/core";
+import { BackgroundImage, Paper, Text, ThemeIcon, Title, useMantineTheme } from "@mantine/core";
 import React from "react";
 
-type Props = {};
+type Props = {
+};
 
 function Surface({}: Props) {
   const theme = useMantineTheme();

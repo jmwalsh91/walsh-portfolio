@@ -1,4 +1,5 @@
-import { createStyles, Paper, Text, Title, Button } from '@mantine/core';
+import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
+import { theme } from '~/styles/theme';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -12,7 +13,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF ${theme.fontFamily}`,
     fontWeight: 900,
     color: theme.white,
     lineHeight: 1.2,
@@ -32,10 +32,12 @@ interface LeadingProjectProps {
   image: string;
   title: string;
   category: string;
+  description: string;
 }
 
-export function LeadingProject({ image, title, category }: LeadingProjectProps) {
+export function LeadingProject({ image, title, category, description }: LeadingProjectProps) {
   const { classes } = useStyles();
+  const theme = useMantineTheme()
 
   return (
     <Paper
@@ -53,8 +55,11 @@ export function LeadingProject({ image, title, category }: LeadingProjectProps) 
           {title}
         </Title>
       </div>
-      <Button variant="white" color="dark">
-        Read article
+      <Text align='right' color={theme.white}>{description}</Text>
+      <Button variant="white" color="dark" sx={{
+        alignSelf: 'end'
+      }}>
+        Learn more
       </Button>
     </Paper>
   );
