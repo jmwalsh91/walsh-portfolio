@@ -17,7 +17,7 @@ function Surface({children, width, height}: Props) {
       shadow="xl"
       sx={{
         backgroundColor: "rgba(255, 255, 255, 0.05)",
-        backdropFilter: "saturate(200%) blur(16px)",
+        backdropFilter: "saturate(200%) blur(16px) brightness(130%)",
         width: w,
         height: h,
         opacity: 0.8,
