@@ -85,6 +85,7 @@ export default function Nav() {
     <NavbarLink
       {...link}
       key={link.label}
+      label={link.label}
       active={index === active}
       onClick={() => handleNav(index)}
     />
@@ -92,7 +93,7 @@ export default function Nav() {
 
   return (
   <>
-      <Navbar.Section grow mt={50}>
+      <Navbar.Section mt={50}>
         <Stack justify="center" spacing={0}>
           {links}
         </Stack>

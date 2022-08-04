@@ -2,12 +2,13 @@ import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme } from '@mantine
 import React from 'react'
 import { LeadingProject } from '../cards/LeadingProject';
 
-type Props = {}
+
 const PRIMARY_COL_HEIGHT = 360;
-function ProjectGrid({}: Props) {
-    const theme = useMantineTheme();
-  const SECONDARY_COL_HEIGHT = PRIMARY_COL_HEIGHT / 2 - theme.spacing.md / 2;
-  return (
+
+function ProjectGrid() {
+const theme = useMantineTheme();
+const SECONDARY_COL_HEIGHT = PRIMARY_COL_HEIGHT / 2 - theme.spacing.md / 2;
+return (
     <Container my="md">
     <SimpleGrid cols={2} spacing="md" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
 <LeadingProject title="cryptones" image={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrO7PqNNqAc39QGOWVqWFAiRPmvJn3iw76Lw&usqp=CAU'} category={'NFT'} description="Unique compositions generated from cryptocurrency price data"/>

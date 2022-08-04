@@ -1,6 +1,6 @@
 import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
 import { theme } from '~/styles/theme';
-
+import { motion } from 'framer-motion';
 const useStyles = createStyles((theme) => ({
   card: {
     height: 440,

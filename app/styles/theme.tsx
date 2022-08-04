@@ -1,6 +1,7 @@
-import { MantineThemeOverride } from "@mantine/core"
+import { MantineTheme, MantineThemeOverride } from "@mantine/core"
 import { useColorScheme } from "@mantine/hooks"
 export const theme: MantineThemeOverride = {
+    colorScheme: 'dark',
     colors: {
       'primary': [
         "#defdfd",

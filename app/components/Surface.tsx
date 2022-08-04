@@ -2,9 +2,10 @@ import { BackgroundImage, Paper, Text, ThemeIcon, Title, useMantineTheme } from 
 import React from "react";
 
 type Props = {
+    children: React.ReactNode
 };
 
-function Surface({}: Props) {
+function Surface({children}: Props) {
   const theme = useMantineTheme();
   return (
     <Paper
@@ -20,16 +21,8 @@ function Surface({}: Props) {
         boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
       }}
     >
-      <Title
-        sx={{
-          color: theme.white,
-        }}
-      >
-       Jordan Walsh
-      </Title>
-     <Text component="h2">
-       React Developer || UI Engineer 
-    </Text>
+
+{children}
     </Paper>
   );
 }

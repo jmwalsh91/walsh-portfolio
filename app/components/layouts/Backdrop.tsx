@@ -2,14 +2,13 @@ import { Center, Paper } from "@mantine/core";
 import React, { ReactChildren } from "react";
 
 type Props = {
-    children: ReactChildren
+    children: React.ReactNode
 };
 
 function Backdrop({children}: Props) {
   return (
     <Paper
       sx={{
-        padding: '4rem',
         width: "100vw",
         height: "100vh",
         background: 'rgb(19,17,28)',
