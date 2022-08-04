@@ -1,5 +1,6 @@
-import { MantineProvider } from "@mantine/core"
+import { BackgroundImage, MantineProvider } from "@mantine/core"
 import {theme} from "../app/styles/theme.tsx"
+import Backdrop from "../app/components/layouts/Backdrop"
 
 
 export const parameters = {
@@ -16,7 +17,10 @@ export const decorators = [
   (Story) => (
     <MantineProvider
     theme={theme}>
+      <Backdrop>
+
       <Story />
+      </Backdrop>
     </MantineProvider>
   )
 ]
