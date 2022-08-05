@@ -1,5 +1,6 @@
 import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme } from '@mantine/core'
 import React from 'react'
+import Headshot from '../cards/Headshot';
 import { LeadingProject } from '../cards/LeadingProject';
 import Surface from '../Surface';
 
@@ -13,7 +14,7 @@ return (
     <Container my="md">
     <Grid>
         <Grid.Col span={6}>
-        <Surface width="100%" >Picture</Surface>
+        <Headshot/>
         </Grid.Col>
     <Grid.Col span={6}>
         <Grid gutter="md" justify="around">
