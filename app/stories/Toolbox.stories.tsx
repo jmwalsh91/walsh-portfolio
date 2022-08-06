@@ -19,8 +19,5 @@ const Template = (args) => <Toolbox {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
    primary: true,
-   label: 'Toolbox',
-   title: 'Toolbox',
-
-   
+   label: 'Toolbox'
 };
