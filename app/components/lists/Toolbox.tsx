@@ -1,4 +1,4 @@
-import { Accordion, Badge, Group, ScrollArea, Stack, Title, useMantineTheme } from "@mantine/core";
+import { Accordion, Badge, Divider, Group, ScrollArea, Stack, Title, useMantineTheme } from "@mantine/core";
 
 import React from "react";
 import Surface from "../Surface";
@@ -36,28 +36,28 @@ const techstack: any = {
 let thing = (
     <>
 
-  <Stack key="frameworks">
-    <Title style={{
+  <Stack key="frameworks" justify='flex-start' align='start'>
+    <Title order={3} /* style={{
         color: 'hsl(192.3, 100%, 45.8%)'
-    }}>Frameworks</Title>
+    }} */>Frameworks</Title>
     <ItemBadge key={"React"}>React</ItemBadge>
     <ItemBadge key={"Remix"}>Remix</ItemBadge>
   </Stack>
     <Stack key="style">
-    <Title>Style</Title>
+    <Title order={3}>Style</Title>
     <ItemBadge key={"Emotion"}>Emotion</ItemBadge>
     <ItemBadge key={"Styled"}>Styled</ItemBadge>
     <ItemBadge key={"Tailwind"}>Tailwind</ItemBadge>
   </Stack>
     <Stack key="UILibraries">
-    <Title>UI Libraries</Title>
+    <Title order={3}>UI Libraries</Title>
     <ItemBadge key={"MUI"}>MUI</ItemBadge>
     <ItemBadge key={"Mantine"}>Mantine</ItemBadge>
     <ItemBadge key={"Daisy UI"}>Daisy UI</ItemBadge>
 
   </Stack>
     <Stack key="QueryCache">
-    <Title>Query/Cache</Title>
+    <Title order={3}>Query/Cache</Title>
     <ItemBadge key={"ReactQuery"}>React Query</ItemBadge>
     <ItemBadge key={"SWR"}>SWR</ItemBadge>
     <ItemBadge key={"Axios"}>Axios</ItemBadge>
@@ -69,11 +69,12 @@ let thing = (
 export default function Toolbox({}: Props) {
     const theme = useMantineTheme();
     return (
-        <div>
-      <Title>Toolbox</Title>
+        <>
+      <Title order={2}>Toolbox:</Title>
+      
       <Stack>
-        <Group>{thing}</Group>
+        <Group position={"left"} align="stretch">{thing}</Group>
       </Stack>
-    </div>
+    </>
   );
 }

@@ -30,8 +30,10 @@ function RoleCards({ title, description, icon, gradient }: RoleCardProps) {
         backdropFilter: "saturate(200%) blur(16px) brightness(130%)",
         boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
         borderRadius: "14px",
-   
         padding: "1rem",
+        height: "100%",
+        minWidth: "12rem",
+        margin: "0 auto"
       }}
     >
       <ThemeIcon
