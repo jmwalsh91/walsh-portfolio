@@ -44,7 +44,7 @@ export default function AppShellDemo({children}: any) {
         <Burger
           opened={opened}
           onClick={() => setOpened((o) => !o)}
-          size="sm"
+          size="lg"
           color={theme.colors.gray[6]}
           mr="xl"
         />
