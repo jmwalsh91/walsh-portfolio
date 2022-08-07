@@ -10,7 +10,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 
-import { IconLeaf, IconMicroscope } from "@tabler/icons";
+import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
 import { motion } from "framer-motion";
 import React from "react";
 import GithubSection from "../about/GithubSection";
@@ -75,7 +75,7 @@ function AboutGrid() {
               <RoleCards
                 title="React Developer"
                 description="Implements modern React architecture and best practices while maintaining a familiarity with legacy methodologies. Translates pre-16.8 codebases into fresh, concurrent-mode enabled @latest."
-                icon={IconLeaf}
+                icon={<IconLeaf/>}
                 gradient={{ deg: 0, from: "cyan", to: "pink" }}
               />
             </Grid.Col>
@@ -83,7 +83,7 @@ function AboutGrid() {
               <RoleCards
                 title="UI Engineer"
                 description="Approaches application architecture and UI design with empathy and knowledge of assistive technologies and W3C/WAI-ARIA standards. Delivers a rad experience to users of all stripes."
-                icon={IconMicroscope}
+                icon={<IconAccessible/>}
                 gradient={{ deg: 17, from: "pink", to: "purple" }}
               />
             </Grid.Col>
@@ -91,8 +91,8 @@ function AboutGrid() {
               <RoleCards
                 title="Full-Stack Typescript"
                 description="API development with Node and Typescript. JSDOC/TSDOC for documentation. Leverages Docker to quickly implement and iterate on backend systems to meet data and UI requirements."
-                icon={IconMicroscope}
-                gradient={{ deg: 17, from: "pink", to: "purple" }}
+                icon={<IconMicroscope/>}
+                gradient={{ deg: 17, from: "blue", to: "lime" }}
               />
             </Grid.Col>
           </Grid>

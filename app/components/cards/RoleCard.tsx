@@ -1,5 +1,5 @@
 import { Paper, Text, ThemeIcon, useMantineTheme } from "@mantine/core";
-import { IconColorSwatch, TablerIcon } from "@tabler/icons";
+import { IconColorSwatch, TablerIcon, TablerIconProps } from "@tabler/icons";
 import { IconLeaf } from "@tabler/icons";
 import React from "react";
 import { theme } from "~/styles/theme";
@@ -16,7 +16,7 @@ interface IconGradient {
 export type RoleCardProps = {
   title: string,
   description: string,
-  icon: TablerIcon
+  icon: TablerIconProps
   gradient: IconGradient;
 };
 function RoleCards({ title, description, icon, gradient }: RoleCardProps) {
