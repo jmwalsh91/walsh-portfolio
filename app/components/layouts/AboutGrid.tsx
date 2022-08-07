@@ -55,7 +55,7 @@ function AboutGrid() {
           </div>
         </Grid.Col>
         <Grid.Col span={8}>
-          <Grid gutter="md" justify="around">
+          <Grid gutter="md">
             <Grid.Col span={12}>
               <Stack>
                 <Title>Jordan Walsh</Title>
@@ -71,7 +71,7 @@ function AboutGrid() {
               </Stack>
             </Grid.Col>
 
-            <Grid.Col span={4}>
+            <Grid.Col span={4} xl={4} lg={4} md={12} sm={12} xs={12}>
               <RoleCards
                 title="React Developer"
                 description="Implements modern React architecture and best practices while maintaining a familiarity with legacy methodologies. Translates pre-16.8 codebases into fresh, concurrent-mode enabled @latest."
@@ -79,7 +79,7 @@ function AboutGrid() {
                 gradient={{ deg: 0, from: "cyan", to: "pink" }}
               />
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={4} xl={4} lg={4} md={12} sm={12} xs={12}>
               <RoleCards
                 title="UI Engineer"
                 description="Approaches application architecture and UI design with empathy and knowledge of assistive technologies and W3C/WAI-ARIA standards. Delivers a rad experience to users of all stripes."
@@ -87,7 +87,7 @@ function AboutGrid() {
                 gradient={{ deg: 17, from: "pink", to: "purple" }}
               />
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col span={4} xl={4} lg={4} md={12} sm={12} xs={12}>
               <RoleCards
                 title="Full-Stack Typescript"
                 description="API development with Node and Typescript. JSDOC/TSDOC for documentation. Leverages Docker to quickly implement and iterate on backend systems to meet data and UI requirements."
