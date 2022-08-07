@@ -80,6 +80,7 @@ export default function Nav() {
   const [active, setActive] = useState(2);
   const navigate = useNavigate()
   const notPhone = useMediaQuery('(min-width: 900px)');
+  const [opened, setOpened] = useState<boolean>(true)
   function handleNav(index: number) {
     setActive(index)
     navigate(`${pages[index].label}`)
@@ -95,8 +96,9 @@ export default function Nav() {
   ));
 
   return (
-  <>
 
+
+      <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 100, }}>
   <Stack>
 
       <Navbar.Section mt={50}>
@@ -104,13 +106,14 @@ export default function Nav() {
           {links}
         </Stack>
       </Navbar.Section>
-      <Navbar.Section sx={{bottom: 1, border: "1px solid green"}}>
+      {/* <Navbar.Section sx={{bottom: 1, border: "1px solid green"}}>
         <Stack justify="center" spacing={0}>
           {links}
         </Stack>
-      </Navbar.Section>
+      </Navbar.Section> */}
   </Stack>
-  </>
+      </Navbar>
+  
 
   );
 }
