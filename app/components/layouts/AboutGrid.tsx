@@ -12,6 +12,7 @@ import {
 import { IconLeaf, IconMicroscope } from "@tabler/icons";
 import { motion } from "framer-motion";
 import React from "react";
+import ThirdSection from "../about/ThirdSection";
 import Headshot from "../cards/Headshot";
 import { LeadingProject } from "../cards/LeadingProject";
 import RoleCards from "../cards/RoleCard";
@@ -67,12 +68,7 @@ function AboutGrid() {
                     I can do all of the following things like a goddamn boss
                     
                   </Text>
-                  <Container sx={{color: "rgb(0, 186, 234)",
-     height: "40px",
-     width: "40px"}}/>
-         <Container sx={{color: "rgb(0, 186, 234)",
-     height: "40px",
-     width: "40px"}}/>
+     
                 </Surface>
               </Stack>
             </Grid.Col>
@@ -130,43 +126,10 @@ function AboutGrid() {
     
 <Toolbox/>
       </motion.div>
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          margin: 100
-        }}
-        transition={{
-            duration: .4
-        }}
-        style={{
-          borderRadius: "1rem",
-          padding: "3rem",
-          border: "1px solid rgba(132, 59, 206, .4)",
-          boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-          marginTop: "10rem",
-        }}
-      >
-        <Stack>
+
           <Title>Rad stuff</Title>
-          <Group>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-          </Group>
-        </Stack>
-      </motion.div>
+          <ThirdSection/>
+
     </Container>
   );
 }
