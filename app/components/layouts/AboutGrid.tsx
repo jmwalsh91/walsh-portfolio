@@ -31,6 +31,7 @@ function AboutGrid() {
     my="md"
     sx={{
         height: "300vh",
+        width: "80vw"
     }}
     >
       <Grid
