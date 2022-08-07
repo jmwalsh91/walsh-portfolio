@@ -81,6 +81,7 @@ export default function Nav() {
   const navigate = useNavigate()
   const notPhone = useMediaQuery('(min-width: 900px)');
   const [opened, setOpened] = useState<boolean>(true)
+  
   function handleNav(index: number) {
     setActive(index)
     navigate(`${pages[index].label}`)

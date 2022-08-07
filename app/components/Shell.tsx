@@ -21,7 +21,7 @@ import { useMediaQuery } from '@mantine/hooks';
 export default function AppShellDemo({children}: any) {
   const theme = useMantineTheme();
   const notPhone = useMediaQuery('(min-width: 900px)')
-
+  const [opened, setOpened] = useState(false);
   return (
     <AppShell
     fixed={false}
@@ -36,6 +36,17 @@ export default function AppShellDemo({children}: any) {
    
       navbar={
         <Nav/>
+      }
+      header={
+        <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+        <Burger
+          opened={opened}
+          onClick={() => setOpened((o) => !o)}
+          size="sm"
+          color={theme.colors.gray[6]}
+          mr="xl"
+        />
+      </MediaQuery>
       }
     >
       <div
