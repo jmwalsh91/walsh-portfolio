@@ -47,6 +47,7 @@ export default function AppShellDemo({children}: any) {
           size="lg"
           color={theme.colors.gray[6]}
           mr="xl"
+          mt=".5rem"
         />
       </MediaQuery>
       }
