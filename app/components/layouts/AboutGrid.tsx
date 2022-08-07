@@ -15,6 +15,8 @@ import React from "react";
 import Headshot from "../cards/Headshot";
 import { LeadingProject } from "../cards/LeadingProject";
 import RoleCards from "../cards/RoleCard";
+import ToolAccordion from "../lists/ToolAccordion";
+import Toolbox from "../lists/Toolbox";
 import Surface from "../Surface";
 import { Top } from "../Top";
 
@@ -23,30 +25,31 @@ function AboutGrid() {
 
   return (
     <Container
-      fluid
-      my="md"
-      sx={{
+    fluid
+    my="md"
+    sx={{
         height: "300vh",
-      }}
+    }}
     >
       {/*       <div dangerouslySetInnerHTML={{__html: `${Top}`}}/> */}
       <Grid
         sx={{
-          width: "100%",
-          marginTop: "10vh",
+            width: "100%",
+            marginTop: "10vh",
         }}
       >
         <Grid.Col span={4}>
           <div
             style={{
-              height: "100%",
-              borderRadius: "1rem",
-              paddingTop: "1rem",
-              border: "rgba(132, 59, 206, 1)",
-              boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+                height: "100%",
+                borderRadius: "1rem",
+                paddingTop: "1rem",
+                border: "rgba(132, 59, 206, 1)",
+                boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
             }}
           >
             <Headshot />
+      
           </div>
         </Grid.Col>
         <Grid.Col span={8}>
@@ -56,9 +59,20 @@ function AboutGrid() {
                 <Title>Jordan Walsh</Title>
 
                 <Surface width="100%" height="5rem">
-                  <Text color={theme.white} size="xl" sx={{ padding: "1rem" }}>
+                  <Text color={"hsl(192.3, 100%, 45.8%)"} size="xl" sx={{ padding: "1rem" }}>
                     I can do all of the following things like a goddamn boss
+                    
                   </Text>
+                  <Text color={"rgb(0, 186, 234)"} size="xl" sx={{ padding: "1rem" }}>
+                    I can do all of the following things like a goddamn boss
+                    
+                  </Text>
+                  <Container sx={{color: "rgb(0, 186, 234)",
+     height: "40px",
+     width: "40px"}}/>
+         <Container sx={{color: "rgb(0, 186, 234)",
+     height: "40px",
+     width: "40px"}}/>
                 </Surface>
               </Stack>
             </Grid.Col>
@@ -93,10 +107,13 @@ function AboutGrid() {
       <motion.div
         initial={{
           opacity: 0,
+   
+          marginRight: "0"
         }}
         whileInView={{
           opacity: 1,
-          margin: 100
+   
+          marginRight: "20vw"
         }}
         transition={{
             duration: .4
@@ -109,23 +126,9 @@ function AboutGrid() {
           marginTop: "10rem",
         }}
       >
-        <Stack>
-          <Title>Rad stuff</Title>
-          <Group>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-            <Surface width="15rem" height="12rem">
-              Hey
-            </Surface>
-          </Group>
-        </Stack>
+  
+    
+<Toolbox/>
       </motion.div>
       <motion.div
         initial={{
