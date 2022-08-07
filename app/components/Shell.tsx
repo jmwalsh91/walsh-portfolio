@@ -35,7 +35,9 @@ export default function AppShellDemo({children}: any) {
       asideOffsetBreakpoint="sm"
    
       navbar={
+        <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
         <Nav/>
+        </MediaQuery>
       }
       header={
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>

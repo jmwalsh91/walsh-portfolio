@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer } from '@mantine/core';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer, MediaQuery } from '@mantine/core';
 import {
   TablerIcon,
   IconHome2,
@@ -79,9 +79,7 @@ const pages = [
 export default function Nav() {
   const [active, setActive] = useState(2);
   const navigate = useNavigate()
-  const notPhone = useMediaQuery('(min-width: 900px)');
-  const [opened, setOpened] = useState<boolean>(true)
-  
+
   function handleNav(index: number) {
     setActive(index)
     navigate(`${pages[index].label}`)
@@ -98,8 +96,9 @@ export default function Nav() {
 
   return (
 
+    <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
 
-      <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 100, }}>
+
   <Stack>
 
       <Navbar.Section mt={50}>
@@ -109,11 +108,11 @@ export default function Nav() {
       </Navbar.Section>
       {/* <Navbar.Section sx={{bottom: 1, border: "1px solid green"}}>
         <Stack justify="center" spacing={0}>
-          {links}
+        {links}
         </Stack>
       </Navbar.Section> */}
   </Stack>
-      </Navbar>
+      </MediaQuery>
   
 
   );
