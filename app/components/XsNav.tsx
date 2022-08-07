@@ -1,4 +1,4 @@
-import { Button, Drawer, Group, Text } from '@mantine/core'
+import { Button, Container, Drawer, Footer, Group, Stack, Text } from '@mantine/core'
 import { IconMailOpened } from '@tabler/icons'
 import React from 'react'
 
@@ -11,19 +11,31 @@ function XsNav({opened, setOpened}: Props) {
   return (
     <>
     <Drawer
+    aria-label="Navigation Dialog"
+    closeButtonLabel="Close Dialog"
     opened={opened}
     onClose={() => setOpened(false)}
-    title="Register"
+    title="Navigation"
     padding="xl"
-    size="xl"
+    size="xs"
   >
-    <Text>Hello</Text>
-    <Text>Hi</Text>
-    <Text>Hola</Text>
-  </Drawer>
+    <Stack justify="space-around" sx={{
+        height: "100vh"
+    }}>
+ 
+<Container>
 
+    <Text size={'xl'}>Github</Text>
+    <Text size={'xl'}>LinkedIn</Text>
+    <Text size={'xl'}>Resume</Text>
+</Container>
+ 
+    <Container>
+        hello
+    </Container>
+        </Stack>
+  </Drawer>
   <Group position="center">
-    <Button onClick={() => setOpened(true)}>Open Drawer</Button>
   </Group>
 </>
   )

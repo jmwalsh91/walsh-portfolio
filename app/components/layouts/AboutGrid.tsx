@@ -33,7 +33,6 @@ function AboutGrid() {
         height: "300vh",
     }}
     >
-      {/*       <div dangerouslySetInnerHTML={{__html: `${Top}`}}/> */}
       <Grid
         sx={{
             width: "100%",
@@ -62,13 +61,10 @@ function AboutGrid() {
 
                 <Surface width="100%" height="5rem">
                   <Text color={"hsl(192.3, 100%, 45.8%)"} size="xl" sx={{ padding: "1rem" }}>
-                    I can do all of the following things like a goddamn boss
+                    I live in a house that i built in the middle of the desert while recovering from multiple abdominal hernias after spending a winter in a canvas tent.
                     
                   </Text>
-                  <Text color={"rgb(0, 186, 234)"} size="xl" sx={{ padding: "1rem" }}>
-                    I can do all of the following things like a goddamn boss
-                    
-                  </Text>
+               
      
                 </Surface>
               </Stack>

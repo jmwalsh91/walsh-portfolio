@@ -13,7 +13,7 @@ import {
   IconSwitchHorizontal,
   IconPencil,
 } from '@tabler/icons';
-import { useNavigate } from '@remix-run/react';
+import { NavLink, useNavigate } from '@remix-run/react';
 import { useMediaQuery } from '@mantine/hooks';
 
 
@@ -84,6 +84,10 @@ export default function Nav() {
     setActive(index)
     navigate(`${pages[index].label}`)
   }
+  const activeStyle = {
+    opacity: 1
+  }
+
   const links = pages.map((link, index) => (
     <NavbarLink
       {...link}
@@ -97,21 +101,41 @@ export default function Nav() {
   return (
 
     <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-
-
-  <Stack>
-
       <Navbar.Section mt={50}>
         <Stack justify="center" spacing={0}>
-          {links}
+        <NavLink to="/">
+            {({ isActive }) => (
+              <NavbarLink
+            active={isActive}
+            icon={IconHome2}
+            label="Home"
+              />
+           
+            )}
+          </NavLink>
+          <NavLink to="/projects">
+            {({ isActive }) => (
+              <NavbarLink
+            active={isActive}
+            icon={IconDeviceDesktopAnalytics}
+            label="Projects"
+              />
+           
+            )}
+          </NavLink>
+          <NavLink to="/blog">
+            {({ isActive }) => (
+              <NavbarLink
+            active={isActive}
+            icon={IconPencil}
+            label="Blog"
+              />
+           
+            )}
+          </NavLink>
         </Stack>
       </Navbar.Section>
-      {/* <Navbar.Section sx={{bottom: 1, border: "1px solid green"}}>
-        <Stack justify="center" spacing={0}>
-        {links}
-        </Stack>
-      </Navbar.Section> */}
-  </Stack>
+  
       </MediaQuery>
   
 
