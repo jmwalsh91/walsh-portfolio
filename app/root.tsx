@@ -32,7 +32,6 @@ export default function App() {
             <Outlet />
           </Shell>
         </MantineTheme>
-
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

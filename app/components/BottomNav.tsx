@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer } from '@mantine/core';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer, Group } from '@mantine/core';
 import {
   TablerIcon,
   IconHome2,
@@ -76,7 +76,7 @@ const pages = [
 
 
 
-export default function Nav() {
+export default function BottomNav() {
   const [active, setActive] = useState(2);
   const navigate = useNavigate()
   const notPhone = useMediaQuery('(min-width: 900px)');
@@ -97,19 +97,16 @@ export default function Nav() {
   return (
   <>
 
-  <Stack>
-
+ 
+<Group>
       <Navbar.Section mt={50}>
         <Stack justify="center" spacing={0}>
           {links}
         </Stack>
       </Navbar.Section>
-      <Navbar.Section sx={{bottom: 1, border: "1px solid green"}}>
-        <Stack justify="center" spacing={0}>
-          {links}
-        </Stack>
-      </Navbar.Section>
-  </Stack>
+</Group>
+     
+
   </>
 
   );

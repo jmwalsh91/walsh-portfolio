@@ -9,10 +9,11 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+
 import { IconLeaf, IconMicroscope } from "@tabler/icons";
 import { motion } from "framer-motion";
 import React from "react";
-import ThirdSection from "../about/ThirdSection";
+import GithubSection from "../about/GithubSection";
 import Headshot from "../cards/Headshot";
 import { LeadingProject } from "../cards/LeadingProject";
 import RoleCards from "../cards/RoleCard";
@@ -128,7 +129,7 @@ function AboutGrid() {
       </motion.div>
 
           <Title>Rad stuff</Title>
-          <ThirdSection/>
+          <GithubSection/>
 
     </Container>
   );

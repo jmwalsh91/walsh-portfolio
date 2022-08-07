@@ -17,9 +17,11 @@ import {
 import bg from '~/assets/CloudBG.jpg'
 import { Link } from '@remix-run/react';
 import Nav from './Nav';
+import { useMediaQuery } from '@mantine/hooks';
 export default function AppShellDemo({children}: any) {
   const theme = useMantineTheme();
-  const [opened, setOpened] = useState(false);
+  const notPhone = useMediaQuery('(min-width: 900px)')
+
   return (
     <AppShell
     fixed={false}
