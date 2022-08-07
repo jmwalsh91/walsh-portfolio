@@ -26,13 +26,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body style={{overflowY: 'hidden'}}>
+      <body style={{ overflowY: "hidden" }}>
         <MantineTheme>
           <Shell>
             <Outlet />
           </Shell>
         </MantineTheme>
-
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
@@ -51,68 +50,78 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
       colorScheme={colorScheme}
       toggleColorScheme={toggleColorScheme}
     >
-      <FontLoader/> 
+      <FontLoader />
       <MantineProvider
         theme={{
           colorScheme: colorScheme,
           colors: {
-            'primary': [
-              "#defdfd",
-              "#bbf2f1",
-              "#95e7e7",
-              "#6ededd",
-              "#49d4d3",
-              "#31bbb9",
-              "#219190",
-              "#136867",
-              "#003f3f",
-              "#001717",
+            primary: [
+              "#d7fdff",
+              "#aaf0ff",
+              "#7ae6ff",
+              "#48daff",
+              "#1ad0ff",
+              "#00b6e6",
+              "#008eb4",
+              "#006582",
+              "#003e50",
+              "#001620",
             ],
-            'secondary': [
-              "#ffe3fd",
-              "#f8b2ff",
-              "#ec80ff",
-              "#f04efe",
-              "#fa1ffd",
-              "#e409db",
-              "#b2039e",
-              "#800068",
-              "#4e003b",
-              "#1e0015",
+            secondary: [
+              "#ffe2ff",
+              "#ffb1ff",
+              "#ff7fff",
+              "#ff4cff",
+              "#ff1aff",
+              "#e600e5",
+              "#b400b3",
+              "#810080",
+              "#4f004e",
+              "#1e001d",
             ],
-            'accent': [
-              "#fffada",
-              "#fff0ad",
-              "#ffe67d",
-              "#ffdb4b",
-              "#ffd11a",
-              "#e6b800",
-              "#b38f00",
-              "#806600",
-              "#4e3d00",
-              "#1d1400",
+            accent: [
+              "#fffbda",
+              "#fff4ad",
+              "#ffee7d",
+              "#ffe64b",
+              "#ffe01a",
+              "#e6c600",
+              "#b39a00",
+              "#806e00",
+              "#4d4200",
+              "#1c1600",
             ],
-            'success': [
-              "#e0fdf3",
-              "#baf2dc",
-              "#94e9c3",
-              "#6bdfa7",
-              "#43d68a",
-              "#29bc7a",
-              "#1d9266",
-              "#11684e",
-              "#044033",
-              "#00170e",
+            success: [
+              "#d9fff3",
+              "#acffe0",
+              "#7cffcb",
+              "#4affb8",
+              "#1affa4",
+              "#00e68a",
+              "#00b36b",
+              "#00804c",
+              "#004e2c",
+              "#001c0b",
             ],
-         
+            purple: [
+              "#f1e3ff",
+              "#d1b2ff",
+              "#b180ff",
+              "#924dff",
+              "#731bfe",
+              "#5902e5",
+              "#4600b3",
+              "#320081",
+              "#1e004f",
+              "#0b001f",
+            ],
           },
           other: {
             accent: "#ffd11a",
           },
-          primaryColor: 'primary',
+          primaryColor: "primary",
           primaryShade: 5,
         }}
-        
         withNormalizeCSS
         withGlobalStyles
       >

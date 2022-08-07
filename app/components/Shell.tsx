@@ -17,8 +17,11 @@ import {
 import bg from '~/assets/CloudBG.jpg'
 import { Link } from '@remix-run/react';
 import Nav from './Nav';
+import { useMediaQuery } from '@mantine/hooks';
+import XsNav from './XsNav';
 export default function AppShellDemo({children}: any) {
   const theme = useMantineTheme();
+  const notPhone = useMediaQuery('(min-width: 900px)')
   const [opened, setOpened] = useState(false);
   return (
     <AppShell
@@ -33,7 +36,24 @@ export default function AppShellDemo({children}: any) {
       asideOffsetBreakpoint="sm"
    
       navbar={
+        <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
         <Nav/>
+        </MediaQuery>
+      }
+      header={
+        <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+          <div>
+        <Burger
+          opened={opened}
+          onClick={() => setOpened((o) => !o)}
+          size="lg"
+          color={theme.colors.gray[6]}
+          mr="xl"
+          mt=".5rem"
+          />
+        <XsNav opened={opened} setOpened={setOpened}/>
+          </div>
+      </MediaQuery>
       }
     >
       <div

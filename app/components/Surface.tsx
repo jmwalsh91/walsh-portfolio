@@ -18,12 +18,13 @@ function Surface({children, width, height}: Props) {
       sx={{
         backgroundColor: "rgba(255, 255, 255, 0.05)",
         backdropFilter: "saturate(200%) blur(16px) brightness(130%)",
+        boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
         width: w,
         height: h,
         opacity: 0.8,
         borderRadius: "14px",
         marginY: "1rem",
-        boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+        
       }}
     >
 
