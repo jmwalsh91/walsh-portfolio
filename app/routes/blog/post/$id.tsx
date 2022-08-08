@@ -1,6 +1,8 @@
 import { Blockquote, Container, Divider, ScrollArea, Stack, Text, Title } from '@mantine/core'
+import { json, LoaderFunction } from '@remix-run/node';
 import { IconPlant, IconPlant2 } from '@tabler/icons'
 import React from 'react'
+import { sb } from '~/services/sb';
 
 
 

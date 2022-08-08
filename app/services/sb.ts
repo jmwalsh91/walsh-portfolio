@@ -82,6 +82,7 @@ getAllProjects: async function getAllProjects(): Promise<ProjectResolved | Proje
     const {data: projects, error} = await sbClient
     .from ('Projects')
     .select('*')
+    console.log(projects, error)
     return projects? projects : error
 },
 getProjectByProjectName: async function getProjectByProjectName(project_name: string): Promise<ProjectResolved | ProjectRejected> {
