@@ -24,7 +24,6 @@ function XsNav({opened, setOpened}: Props) {
     }}>
  
 <Container>
-
     <Text size={'xl'}>Github</Text>
     <Text size={'xl'}>LinkedIn</Text>
     <Text size={'xl'}>Resume</Text>
