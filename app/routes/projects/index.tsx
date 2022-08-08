@@ -13,7 +13,7 @@ type Props = {}
 export const loader: LoaderFunction = async () => {
   //TODO: ERROR Handlers
   return json(await sb.getAllProjects())
-};
+}; 
 
 function Projects({}: Props) {
   const theme = useMantineTheme();
