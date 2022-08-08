@@ -2,9 +2,9 @@ import { Blockquote, Container, Divider, ScrollArea, Stack, Text, Title } from '
 import { IconPlant, IconPlant2 } from '@tabler/icons'
 import React from 'react'
 
-type Props = {}
 
-function $id({}: Props) {
+
+function $id() {
   return (
         <Container>
   
