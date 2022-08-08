@@ -40,12 +40,12 @@ export const loader: LoaderFunction = async ({request, params}) => {
     return json(thing)
    
   };
-function $name({}: Props) {
-  const theme = useMantineTheme();
-  const data = useLoaderData()
-  useLogger('$name', [data])
-  return (
-    <>
+  function $name({}: Props) {
+      const theme = useMantineTheme();
+      const data = useLoaderData()
+      useLogger('$name', [data])
+      return (
+          <>
       <Container fluid mb={"4rem"}>
         <Title order={1} align="right" mt={"3rem"} mb={"1rem"}>
           {data[0].project_name}
@@ -56,10 +56,14 @@ function $name({}: Props) {
               src={data[0].mockup}
               alt={data[0].project_name}
               sx={{
-                border: "1px solid rgba(132, 59, 206, .4)",
-                boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-              }}
-            />
+                  border: "1px solid rgba(132, 59, 206, .4)",
+                  boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+                }}
+                />
+                Built with:
+                {data[0].stack_badges.map((item: string) => (
+                  <Badge key={item}>{item}</Badge>
+                ))}
           </Grid.Col>
           <Grid.Col  xs={12} lg={6}>
          <Stack>
@@ -84,10 +88,6 @@ function $name({}: Props) {
                 <Text>
                  {data[0].description}
                 </Text>
-                Built with:
-                {data[0].stack_badges.map((item: string) => (
-                  <Badge key={item}>{item}</Badge>
-                ))}
               </div>
             </Stack>
           </Grid.Col>
