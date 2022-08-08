@@ -1,12 +1,15 @@
 import { Blockquote, Container, Divider, ScrollArea, Stack, Text, Title } from '@mantine/core'
 import { json, LoaderFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
 import { IconPlant, IconPlant2 } from '@tabler/icons'
 import React from 'react'
-import { sb } from '~/services/sb';
+import { Project, sb } from '~/services/sb';
 
 
 
 function $id() {
+
+
   return (
         <Container>
   
