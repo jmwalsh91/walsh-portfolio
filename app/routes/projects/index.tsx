@@ -7,7 +7,6 @@ type Props = {}
 
 function index({}: Props) {
   return (
-    
     <Backdrop>
       <ProjectGrid/>
     </Backdrop>
