@@ -12,9 +12,13 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import { useLogger } from "@mantine/hooks";
+import { json, LoaderFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { motion } from "framer-motion";
 import React from "react";
 import Surface from "~/components/Surface";
+import { Project, sb } from "~/services/sb";
 
 type Props = {};
 const tech = [
@@ -26,23 +30,40 @@ const tech = [
   "Tone.js",
   "Tonal.js",
 ];
-function $name({}: Props) {
-  const theme = useMantineTheme();
-  return (
-    <>
+
+export const loader: LoaderFunction = async ({request, params}) => {
+    //TODO: ERROR Handlers
+    console.log(params)
+    const thing = await sb.getProjectByProjectName(params.name as Project['project_name'])
+    console.log(thing)
+    console.log('is thing')
+    return json(thing)
+   
+  };
+  function $name({}: Props) {
+      const theme = useMantineTheme();
+      const data = useLoaderData()
+      useLogger('$name', [data])
+      return (
+          <>
       <Container fluid mb={"4rem"}>
         <Title order={1} align="right" mt={"3rem"} mb={"1rem"}>
-          crypTones
+          {data[0].project_name}
         </Title>
         <Grid>
           <Grid.Col xs={12} lg={6}>
             <Image
-              src="https://www.jmwalsh.dev/static/media/cryptonesv2.1ca65417c164c0c749fa.jpg"
+              src={data[0].mockup}
+              alt={data[0].project_name}
               sx={{
-                border: "1px solid rgba(132, 59, 206, .4)",
-                boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-              }}
-            />
+                  border: "1px solid rgba(132, 59, 206, .4)",
+                  boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+                }}
+                />
+                Built with:
+                {data[0].stack_badges.map((item: string) => (
+                  <Badge key={item}>{item}</Badge>
+                ))}
           </Grid.Col>
           <Grid.Col  xs={12} lg={6}>
          <Stack>
@@ -54,7 +75,7 @@ function $name({}: Props) {
                   boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
                 }}
               >
-                Generate unique compositions with cryptocurrency price data.
+                {data[0].card_text}
               </div>
               <div
                 style={{
@@ -65,23 +86,8 @@ function $name({}: Props) {
                 }}
               >
                 <Text>
-                  crypTones was inspired by techniques for composing generative
-                  music, data sonification, and modular synthesis. Featuring two
-                  unique algorithms for converting cryptocurrency price data
-                  into sequences of frequency values, and multiple additional
-                  parameters such as filtering notes based on key and mode,
-                  millions of unique combinations are possible from the same set
-                  of an initial data. Frontend uses SWR to synchronize data
-                  between components and leverages Suspense and
-                  React-Error-Boundary to reduce perceivable loading states,
-                  ToneJS and Tonal for converting and filtering note/frequency
-                  values and generating audio with the Web Audio API, and
-                  ApexCharts for rendering cryptocurrency price data.
+                 {data[0].description}
                 </Text>
-                Built with:
-                {tech.map((item) => (
-                  <Badge key={item}>{item}</Badge>
-                ))}
               </div>
             </Stack>
           </Grid.Col>
