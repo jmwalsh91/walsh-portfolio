@@ -90,6 +90,8 @@ getProjectByProjectName: async function getProjectByProjectName(project_name: st
     .from ('Projects')
     .select()
     .ilike('project_name', project_name)
+
+    console.log(project, error)
     return project? project : error
 }
   }
