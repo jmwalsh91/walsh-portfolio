@@ -35,8 +35,8 @@ function AboutGrid() {
     fluid
     my="md"
     sx={{
-        height: "300vh",
-        width: "80vw"
+        height: "400vh",
+        width: "80vw",
     }}
     >
       <Grid
@@ -112,8 +112,11 @@ function AboutGrid() {
 
           <Title>Rad stuff</Title>
           <GithubSection/>
+        <div style={{height: "10rem"}}>
 
+        </div>
     </Container>
+    
   );
 }
 

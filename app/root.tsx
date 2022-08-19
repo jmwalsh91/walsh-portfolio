@@ -26,7 +26,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body style={{ overflowY: "hidden" }}>
+      <body style={{ overflow: "none" }}>
         <MantineTheme>
           <Shell>
             <Outlet />

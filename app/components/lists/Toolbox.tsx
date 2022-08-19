@@ -1,4 +1,5 @@
-import { Accordion, Badge, Divider, Group, ScrollArea, Stack, Title, useMantineTheme } from "@mantine/core";
+import { Accordion, Badge, Divider, Group, ScrollArea, Stack, Tabs, Title, useMantineTheme } from "@mantine/core";
+import { IconBrowser, IconServer, IconTrack } from "@tabler/icons";
 
 import React from "react";
 import Surface from "../Surface";
@@ -33,7 +34,7 @@ const techstack: any = {
     );
 }); */
 
-let thing = (
+let frontend = (
     <>
 
   <Stack key="frameworks" justify='flex-start' align='start'>
@@ -65,16 +66,66 @@ let thing = (
     </>
 
 );
+let backend = (
+  <>
+
+<Stack key="backendframeworks" justify='flex-start' align='start'>
+  <Title order={3} /* style={{
+      color: 'hsl(192.3, 100%, 45.8%)'
+  }} */>Frameworks</Title>
+  <ItemBadge key={"Node"}>Node</ItemBadge>
+  <ItemBadge key={"Express"}>Express</ItemBadge>
+</Stack>
+  <Stack key="style">
+  <Title order={3}>Style</Title>
+  <ItemBadge key={"Emotion"}>Things</ItemBadge>
+  <ItemBadge key={"Styled"}>Other Things</ItemBadge>
+  <ItemBadge key={"Tailwind"}>Tailwind</ItemBadge>
+</Stack>
+  <Stack key="UILibraries">
+  <Title order={3}>Still thingses</Title>
+  <ItemBadge key={"MUI"}>Way things</ItemBadge>
+  <ItemBadge key={"Mantine"}>Cool things</ItemBadge>
+  <ItemBadge key={"Daisy UI"}>Sick things bro</ItemBadge>
+
+</Stack>
+  <Stack key="QueryCache">
+  <Title order={3}>Query/Cache</Title>
+  <ItemBadge key={"ReactQuery"}>React Query</ItemBadge>
+  <ItemBadge key={"SWR"}>SWR</ItemBadge>
+  <ItemBadge key={"Axios"}>Axios</ItemBadge>
+</Stack>
+  </>
+
+);
 
 export default function Toolbox({}: Props) {
     const theme = useMantineTheme();
     return (
         <>
       <Title order={2}>Toolbox:</Title>
-      
+      <Tabs defaultValue="Frontend">
+      <Tabs.List>
+        <Tabs.Tab value="Frontend" icon={<IconBrowser size={14} />}>Frontend</Tabs.Tab>
+        <Tabs.Tab value="Backend" icon={<IconServer size={14} />}>Backend</Tabs.Tab>
+        <Tabs.Tab value="SDLC" icon={<IconTrack size={14} />}>SDLC</Tabs.Tab>
+      </Tabs.List>
+      <Tabs.Panel value="Frontend">
       <Stack>
-        <Group position={"left"} align="stretch">{thing}</Group>
+        <Group position={"left"} align="stretch">{frontend}</Group>
       </Stack>
+      </Tabs.Panel>
+      <Tabs.Panel value="Backend">
+      <Stack>
+        <Group position={"left"} align="stretch">{backend}</Group>
+      </Stack>
+</Tabs.Panel>
+      <Tabs.Panel value="SDLC">
+      <Stack>
+        <Group position={"left"} align="stretch">{backend}</Group>
+      </Stack>
+        </Tabs.Panel>
+      </Tabs>
     </>
   );
 }

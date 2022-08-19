@@ -45,7 +45,6 @@ function GithubSection({}: Props) {
           border: `1px solid ${theme.colors.primary[5]}`,
           boxShadow: `${theme.colors.primary[8]} 0px 4px 24px 0px`,
           display: "flex",
-          
           flexDirection: "column",
         }}
       >
@@ -61,7 +60,7 @@ function GithubSection({}: Props) {
 
         }}
         whileHover={{
-          scale: 1.1
+          scale: 1.0
         }}
         transition={{
           duration: 1.2,
@@ -97,7 +96,7 @@ function GithubSection({}: Props) {
           border: `5px solid ${theme.colors.primary[5]}`,
         }}
         whileHover={{
-          scale: 1.1
+          scale: 1.02
         }}
         transition={{
           duration: 1.2,
