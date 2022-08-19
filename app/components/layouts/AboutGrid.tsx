@@ -2,6 +2,7 @@ import {
   Container,
   Grid,
   Group,
+  MediaQuery,
   SimpleGrid,
   Skeleton,
   Stack,
@@ -9,14 +10,17 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
 import { motion } from "framer-motion";
 import React from "react";
 import GithubSection from "../about/GithubSection";
+import { BioCard } from "../cards/BioCard";
 import Headshot from "../cards/Headshot";
 import { LeadingProject } from "../cards/LeadingProject";
 import RoleCards from "../cards/RoleCard";
+import { SmallBio } from "../cards/SmallBio";
 import ToolAccordion from "../lists/ToolAccordion";
 import Toolbox from "../lists/Toolbox";
 import Surface from "../Surface";
@@ -24,6 +28,7 @@ import { Top } from "../Top";
 
 function AboutGrid() {
   const theme = useMantineTheme();
+  const narrowView = useMediaQuery("(max-width: 600px)");
 
   return (
     <Container
@@ -40,36 +45,16 @@ function AboutGrid() {
             marginTop: "10vh",
         }}
       >
-        <Grid.Col span={4}>
-          <div
-            style={{
-                height: "100%",
-                borderRadius: "1rem",
-                paddingTop: "1rem",
-                border: "rgba(132, 59, 206, 1)",
-                boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-            }}
-          >
-            <Headshot />
+        <Grid.Col xs={12} md={4}>
+       {narrowView ? 
+         <SmallBio avatar={"https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"} name={"Jordan Walsh"} title={"Software Developer"} phone={"(405) 479 3668"} email={"jordan@jmwalsh.dev"}/>
+           : <BioCard image={"https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"} avatar={"https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"} name={"Jordan Walsh"} job={"UI Engineer"} stats={[]}/>
       
-          </div>
+       }
         </Grid.Col>
         <Grid.Col span={8}>
           <Grid gutter="md">
-            <Grid.Col span={12}>
-              <Stack>
-                <Title>Jordan Walsh</Title>
-
-                <Surface width="100%" height="5rem">
-                  <Text color={"hsl(192.3, 100%, 45.8%)"} size="xl" sx={{ padding: "1rem" }}>
-                    I live in a house that i built in the middle of the desert while recovering from multiple abdominal hernias after spending a winter in a canvas tent.
-                    
-                  </Text>
-               
      
-                </Surface>
-              </Stack>
-            </Grid.Col>
 
             <Grid.Col span={4} xl={4} lg={4} md={12} sm={12} xs={12}>
               <RoleCards

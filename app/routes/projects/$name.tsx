@@ -1,12 +1,8 @@
 import {
-  AspectRatio,
   Badge,
-  Center,
   Container,
   Grid,
-  Group,
   Image,
-  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -16,8 +12,7 @@ import { useLogger } from "@mantine/hooks";
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { motion } from "framer-motion";
-import React from "react";
-import Surface from "~/components/Surface";
+
 import { Project, sb } from "~/services/sb";
 
 type Props = {};
@@ -31,21 +26,18 @@ const tech = [
   "Tonal.js",
 ];
 
-export const loader: LoaderFunction = async ({request, params}) => {
-    //TODO: ERROR Handlers
-    console.log(params)
-    const thing = await sb.getProjectByProjectName(params.name as Project['project_name'])
-    console.log(thing)
-    console.log('is thing')
-    return json(thing)
-   
-  };
-  function $name({}: Props) {
-      const theme = useMantineTheme();
-      const data = useLoaderData()
-      useLogger('$name', [data])
-      return (
-          <>
+export const loader: LoaderFunction = async ({ request, params }) => {
+  const thing = await sb.getProjectByProjectName(
+    params.name as Project["project_name"]
+  );
+  return json(thing);
+};
+function $name({}: Props) {
+  const theme = useMantineTheme();
+  const data = useLoaderData();
+  useLogger("$name", [data]);
+  return (
+    <>
       <Container fluid mb={"4rem"}>
         <Title order={1} align="right" mt={"3rem"} mb={"1rem"}>
           {data[0].project_name}
@@ -56,17 +48,17 @@ export const loader: LoaderFunction = async ({request, params}) => {
               src={data[0].mockup}
               alt={data[0].project_name}
               sx={{
-                  border: "1px solid rgba(132, 59, 206, .4)",
-                  boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-                }}
-                />
-                Built with:
-                {data[0].stack_badges.map((item: string) => (
-                  <Badge key={item}>{item}</Badge>
-                ))}
+                border: "1px solid rgba(132, 59, 206, .4)",
+                boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+              }}
+            />
+            Built with:
+            {data[0].stack_badges.map((item: string) => (
+              <Badge key={item}>{item}</Badge>
+            ))}
           </Grid.Col>
-          <Grid.Col  xs={12} lg={6}>
-         <Stack>
+          <Grid.Col xs={12} lg={6}>
+            <Stack>
               <div
                 style={{
                   borderRadius: "1rem",
@@ -85,9 +77,7 @@ export const loader: LoaderFunction = async ({request, params}) => {
                   boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
                 }}
               >
-                <Text>
-                 {data[0].description}
-                </Text>
+                <Text>{data[0].description}</Text>
               </div>
             </Stack>
           </Grid.Col>
