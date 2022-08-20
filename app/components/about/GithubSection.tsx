@@ -40,6 +40,7 @@ function GithubSection({}: Props) {
           type: "tween",
         }}
         style={{
+          maxWidth: "60rem",
           borderRadius: "1rem",
           padding: "1rem",
           border: `1px solid ${theme.colors.primary[5]}`,
@@ -67,12 +68,12 @@ function GithubSection({}: Props) {
           type: "spring",
         }}
           style={{
-            
+        
             borderRadius: "1rem",
             padding: ".5rem",
             border: `2px solid ${theme.colors.primary[5]}`,
             boxShadow: `${theme.colors.primary[8]} 0px 4px 24px 0px`,
-            width: "20rem",
+            width: "25rem",
             height: "100%",
             display: "flex",
             justifyContent: "start",
@@ -81,7 +82,7 @@ function GithubSection({}: Props) {
         >
           <Image
             src="https://github-readme-stats.vercel.app/api?username=jmwalsh91&amp;theme=react&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true"
-            alt="Shows github stats. Total stars, commits, pull requests, issues, and organizations commited to." width="20rem" height="100%"
+            alt="Shows github stats. Total stars, commits, pull requests, issues, and organizations commited to." width="25rem" height="100%"
           />
         </motion.div>
         <motion.div
