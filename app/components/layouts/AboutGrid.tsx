@@ -15,6 +15,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
 import { motion } from "framer-motion";
 import React from "react";
+import CallToAction from "../about/CallToAction";
 import GithubSection from "../about/GithubSection";
 import { BioCard } from "../cards/BioCard";
 import Headshot from "../cards/Headshot";
@@ -92,7 +93,7 @@ function AboutGrid() {
         whileInView={{
           opacity: 1,
    
-          marginRight: "20vw"
+
         }}
         transition={{
             duration: .4
@@ -113,7 +114,7 @@ function AboutGrid() {
           <Title>Rad stuff</Title>
           <GithubSection/>
         <div style={{height: "10rem"}}>
-
+<CallToAction/>
         </div>
     </Container>
     

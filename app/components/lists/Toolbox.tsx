@@ -112,17 +112,17 @@ export default function Toolbox({}: Props) {
       </Tabs.List>
       <Tabs.Panel value="Frontend">
       <Stack>
-        <Group position={"left"} align="stretch">{frontend}</Group>
+        <Group position={"left"} spacing={20} align="stretch">{frontend}</Group>
       </Stack>
       </Tabs.Panel>
       <Tabs.Panel value="Backend">
       <Stack>
-        <Group position={"left"} align="stretch">{backend}</Group>
+        <Group position={"left"} spacing={20} align="stretch">{backend}</Group>
       </Stack>
 </Tabs.Panel>
       <Tabs.Panel value="SDLC">
       <Stack>
-        <Group position={"left"} align="stretch">{backend}</Group>
+        <Group position={"left"} spacing={20} align="stretch">{backend}</Group>
       </Stack>
         </Tabs.Panel>
       </Tabs>
