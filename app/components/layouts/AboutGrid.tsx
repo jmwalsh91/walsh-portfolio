@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import CallToAction from "../about/CallToAction";
 import GithubSection from "../about/GithubSection";
+import SmGithubSection from "../about/SmGithubSection";
 import { BioCard } from "../cards/BioCard";
 import Headshot from "../cards/Headshot";
 import { LeadingProject } from "../cards/LeadingProject";
@@ -27,6 +28,7 @@ import ToolAccordion from "../lists/ToolAccordion";
 import Toolbox from "../lists/Toolbox";
 import Surface from "../Surface";
 import { Top } from "../Top";
+
 
 function AboutGrid() {
   const theme = useMantineTheme();
@@ -40,7 +42,7 @@ function AboutGrid() {
     sx={{
         height: "400vh",
         width: "80vw",
-        justifyContent: "center",
+
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
@@ -65,7 +67,7 @@ function AboutGrid() {
           <Grid gutter="md">
      
 
-            <Grid.Col span={4} xl={4} lg={4} md={12} sm={12} xs={12}>
+            <Grid.Col span={12} xl={4} lg={4} md={12} sm={12} xs={12}>
               <RoleCards
                 title="React Developer"
                 description="Implements modern React architecture and best practices while maintaining a familiarity with legacy methodologies. Translates pre-16.8 codebases into fresh, concurrent-mode enabled @latest."
@@ -73,7 +75,7 @@ function AboutGrid() {
                 gradient={{ deg: 0, from: "cyan", to: "pink" }}
                 />
             </Grid.Col>
-            <Grid.Col span={4} xl={4} lg={4} md={12} sm={12} xs={12}>
+            <Grid.Col span={12} xl={4} lg={4} md={12} sm={12} xs={12}>
               <RoleCards
                 title="UI Engineer"
                 description="Approaches application architecture and UI design with empathy and knowledge of assistive technologies and W3C/WAI-ARIA standards. Delivers a rad experience to users of all stripes."
@@ -100,8 +102,6 @@ function AboutGrid() {
         }}
         whileInView={{
           opacity: 1,
-          
-          
         }}
         transition={{
           duration: .4
@@ -112,6 +112,7 @@ function AboutGrid() {
           border: "1px solid rgba(132, 59, 206, .4)",
           boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
           marginTop: "10rem",
+          width: narrowView? "18rem" : "35rem"
         }}
         >
   
@@ -120,11 +121,12 @@ function AboutGrid() {
       </motion.div>
 
           <Title>Rad stuff</Title>
-          <GithubSection/>
+          {narrowView ? <SmGithubSection/> :
+          <GithubSection/>}
         <div style={{height: "10rem"}}>
 <CallToAction/>
         </div>
-        
+      
     </Container>
     
   );

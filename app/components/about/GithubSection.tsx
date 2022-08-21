@@ -7,6 +7,7 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -14,6 +15,7 @@ type Props = {};
 
 function GithubSection({}: Props) {
   const theme = useMantineTheme();
+  const narrowView = useMediaQuery("(max-width: 600px)");
   return (
     <>
       <Title
@@ -41,24 +43,24 @@ function GithubSection({}: Props) {
         }}
         style={{
           maxWidth: "60rem",
+          width: narrowView? "18rem": "40rem",
           borderRadius: "1rem",
           padding: "1rem",
           border: `1px solid ${theme.colors.primary[5]}`,
           boxShadow: `${theme.colors.primary[8]} 0px 4px 24px 0px`,
           display: "flex",
           flexDirection: "column",
+
         }}
       >
         <motion.div
         initial={{
           opacity: 0,
           marginLeft: "-5rem",
-
         }}
         whileInView={{
           marginLeft: "1rem",
           opacity: 1,
-
         }}
         whileHover={{
           scale: 1.0
@@ -77,7 +79,7 @@ function GithubSection({}: Props) {
             height: "100%",
             display: "flex",
             justifyContent: "start",
-            justifySelf: "start" 
+            justifySelf: "start",
           }}
         >
           <Image
