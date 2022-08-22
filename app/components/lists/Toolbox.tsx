@@ -69,7 +69,7 @@ let frontend = (
 let backend = (
   <>
 
-<Stack key="backendframeworks" justify='flex-start' align='start'>
+<Stack key="backendframeworks" justify='flex-start' >
   <Title order={3} /* style={{
       color: 'hsl(192.3, 100%, 45.8%)'
   }} */>Frameworks</Title>
@@ -104,14 +104,23 @@ export default function Toolbox({}: Props) {
     return (
         <>
       <Title order={2}>Toolbox:</Title>
-      <Tabs defaultValue="Frontend">
-      <Tabs.List>
-        <Tabs.Tab value="Frontend" icon={<IconBrowser size={14} />}>Frontend</Tabs.Tab>
-        <Tabs.Tab value="Backend" icon={<IconServer size={14} />}>Backend</Tabs.Tab>
-        <Tabs.Tab value="SDLC" icon={<IconTrack size={14} />}>SDLC</Tabs.Tab>
+    
+
+      <Tabs defaultValue="Frontend" sx={{
+        width: "100%"
+      }}>
+      <Tabs.List sx={{marginBottom: "1rem"}} >
+        <Group >
+
+        <Tabs.Tab value="Frontend" icon={<IconBrowser size={28} />}>Frontend</Tabs.Tab>
+        <Tabs.Tab value="Backend" icon={<IconServer size={28} />}>Backend</Tabs.Tab>
+        <Tabs.Tab value="SDLC" icon={<IconTrack size={28} />}>SDLC</Tabs.Tab>
+        </Group>
       </Tabs.List>
       <Tabs.Panel value="Frontend">
-      <Stack>
+      <Stack sx={{
+      padding: "1rem"
+      }}>
         <Group position={"left"} spacing={20} align="stretch">{frontend}</Group>
       </Stack>
       </Tabs.Panel>
@@ -126,6 +135,7 @@ export default function Toolbox({}: Props) {
       </Stack>
         </Tabs.Panel>
       </Tabs>
+ 
     </>
   );
 }

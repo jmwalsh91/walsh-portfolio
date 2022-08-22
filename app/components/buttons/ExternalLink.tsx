@@ -11,15 +11,14 @@ type Props = {
 function ExternalLinkButton({icon, label, url}: Props) {
     const theme = useMantineTheme()
   return (
-    <Button component='a' href={url} size={'xl'} sx={{
+    <Button component='a' href={url} size={'xl'} variant="outline"  sx={{
         textDecoration: 'none',
-      borderRadius: theme.radius.md,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: theme.white,
+        
       opacity: 0.85,
-      padding: ".5rem"
+      padding: ".5rem",
+
+      background: theme.primaryColor
+ 
       }}>
         {icon}
         {label}

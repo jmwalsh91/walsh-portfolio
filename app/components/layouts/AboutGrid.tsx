@@ -54,7 +54,7 @@ function AboutGrid() {
           marginTop: "10vh",
         }}
       >
-        <Grid.Col xs={5} md={5}>
+        <Grid.Col xs={12} md={12}>
           {/* {narrowView ? (
             <SmallBio
               avatar={
@@ -80,8 +80,7 @@ function AboutGrid() {
           )} */}
           <Bio/>
         </Grid.Col>
-        <Grid.Col xs={7} md={7}>
-          <Title order={1}>React Developer.</Title></Grid.Col>
+    
         <Grid.Col span={12}>
           <Grid gutter="md">
             <Grid.Col span={12}>
@@ -137,11 +136,11 @@ function AboutGrid() {
         }}
         style={{
           borderRadius: "1rem",
-          padding: "3rem",
+          padding: "1rem",
           border: "1px solid rgba(132, 59, 206, .4)",
           boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
           marginTop: "10rem",
-          width: narrowView ? "18rem" : "35rem",
+          width: "85vw"
         }}
       >
         <Toolbox />

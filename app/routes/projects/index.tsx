@@ -22,13 +22,13 @@ const data = useLoaderData()
 return (
   <Backdrop>
     <Container my="md">
-      <Grid gutter="xl" m="2rem">
+      <Grid gutter="xl" m="1rem">
 
     {data.map((project: Project) => {
       return (
       <Grid.Col
       xs={12}
-      sm={6}
+      md={6}
       key={project.project_name}>
         <LeadingProject key={project.project_name} image={project.mockup} title={project.project_name} category={'projects'} description={project.card_text} />
         </Grid.Col>

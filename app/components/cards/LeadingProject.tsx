@@ -46,7 +46,7 @@ export function LeadingProject({ image, title, category, description }: LeadingP
   }
   return (
     <Paper
-      shadow="md"
+      shadow="xl"
       p="xl"
       radius="md"
       sx={{ backgroundImage: `url(${image})` }}
