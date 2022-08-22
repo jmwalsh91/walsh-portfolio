@@ -41,27 +41,27 @@ let frontend = (
     <Title order={3} /* style={{
         color: 'hsl(192.3, 100%, 45.8%)'
     }} */>Frameworks</Title>
-    <ItemBadge key={"React"}>React</ItemBadge>
-    <ItemBadge key={"Remix"}>Remix</ItemBadge>
+    <ItemBadge name={"React"}>React</ItemBadge>
+    <ItemBadge name={"Remix"}>Remix</ItemBadge>
   </Stack>
     <Stack key="style">
     <Title order={3}>Style</Title>
-    <ItemBadge key={"Emotion"}>Emotion</ItemBadge>
-    <ItemBadge key={"Styled"}>Styled</ItemBadge>
-    <ItemBadge key={"Tailwind"}>Tailwind</ItemBadge>
+    <ItemBadge name={"Emotion"}>Emotion</ItemBadge>
+    <ItemBadge name={"Styled"}>Styled</ItemBadge>
+    <ItemBadge name={"Tailwind"}>Tailwind</ItemBadge>
   </Stack>
     <Stack key="UILibraries">
     <Title order={3}>UI Libraries</Title>
-    <ItemBadge key={"MUI"}>MUI</ItemBadge>
-    <ItemBadge key={"Mantine"}>Mantine</ItemBadge>
-    <ItemBadge key={"Daisy UI"}>Daisy UI</ItemBadge>
+    <ItemBadge name={"MUI"}>MUI</ItemBadge>
+    <ItemBadge name={"Mantine"}>Mantine</ItemBadge>
+    <ItemBadge name={"Daisy UI"}>Daisy UI</ItemBadge>
 
   </Stack>
     <Stack key="QueryCache">
     <Title order={3}>Query/Cache</Title>
-    <ItemBadge key={"ReactQuery"}>React Query</ItemBadge>
-    <ItemBadge key={"SWR"}>SWR</ItemBadge>
-    <ItemBadge key={"Axios"}>Axios</ItemBadge>
+    <ItemBadge name={"ReactQuery"}>React Query</ItemBadge>
+    <ItemBadge name={"SWR"}>SWR</ItemBadge>
+    <ItemBadge name={"Axios"}>Axios</ItemBadge>
   </Stack>
     </>
 
@@ -69,31 +69,31 @@ let frontend = (
 let backend = (
   <>
 
-<Stack key="backendframeworks" justify='flex-start' >
+<Stack key="backendframeworks" justify='flex-start' align='start'>
   <Title order={3} /* style={{
       color: 'hsl(192.3, 100%, 45.8%)'
   }} */>Frameworks</Title>
-  <ItemBadge key={"Node"}>Node</ItemBadge>
-  <ItemBadge key={"Express"}>Express</ItemBadge>
+  <ItemBadge name={"Node"}>Node</ItemBadge>
+  <ItemBadge name={"Express"}>Express</ItemBadge>
 </Stack>
   <Stack key="style">
   <Title order={3}>Style</Title>
-  <ItemBadge key={"Emotion"}>Things</ItemBadge>
-  <ItemBadge key={"Styled"}>Other Things</ItemBadge>
-  <ItemBadge key={"Tailwind"}>Tailwind</ItemBadge>
+  <ItemBadge name={"Emotion"}>Things</ItemBadge>
+  <ItemBadge name={"Styled"}>Other Things</ItemBadge>
+  <ItemBadge name={"Tailwind"}>Tailwind</ItemBadge>
 </Stack>
   <Stack key="UILibraries">
   <Title order={3}>Still thingses</Title>
-  <ItemBadge key={"MUI"}>Way things</ItemBadge>
-  <ItemBadge key={"Mantine"}>Cool things</ItemBadge>
-  <ItemBadge key={"Daisy UI"}>Sick things bro</ItemBadge>
+  <ItemBadge name={"MUI"}>Way things</ItemBadge>
+  <ItemBadge name={"Mantine"}>Cool things</ItemBadge>
+  <ItemBadge name={"Daisy UI"}>Sick things bro</ItemBadge>
 
 </Stack>
   <Stack key="QueryCache">
   <Title order={3}>Query/Cache</Title>
-  <ItemBadge key={"ReactQuery"}>React Query</ItemBadge>
-  <ItemBadge key={"SWR"}>SWR</ItemBadge>
-  <ItemBadge key={"Axios"}>Axios</ItemBadge>
+  <ItemBadge name={"ReactQuery"}>React Query</ItemBadge>
+  <ItemBadge name={"SWR"}>SWR</ItemBadge>
+  <ItemBadge name={"Axios"}>Axios</ItemBadge>
 </Stack>
   </>
 

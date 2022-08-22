@@ -42,7 +42,7 @@ function $name({}: Props) {
         <Title order={1} align="right" mt={"3rem"} mb={"1rem"}>
           {data[0].project_name}
         </Title>
-        <Grid>
+        <Grid justify="center" align="center">
           <Grid.Col xs={12} lg={6}>
             <Image
               src={data[0].mockup}
@@ -50,6 +50,7 @@ function $name({}: Props) {
               sx={{
                 border: "1px solid rgba(132, 59, 206, .4)",
                 boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+                maxWidth: "80vw",
               }}
             />
             Built with:

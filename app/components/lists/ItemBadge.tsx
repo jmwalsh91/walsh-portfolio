@@ -4,15 +4,15 @@ import React from 'react'
 
 type Props = {
     children: React.ReactNode,
-    key: string
+    name: string
 }
 
-function ItemBadge({children, key}: Props) {
+function ItemBadge({children, name}: Props) {
   return (
     <motion.div>
       
     <Paper
-    key={key}
+    key={name}
     shadow="xl"
     sx={{
       backgroundColor: "rgba(255, 255, 255, 0.05)",
