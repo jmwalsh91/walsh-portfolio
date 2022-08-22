@@ -1,4 +1,4 @@
-import { Avatar, Button, Card, createStyles, Group, Text } from '@mantine/core';
+import { Avatar, Box, Button, Card, createStyles, Group, Paper, Text } from '@mantine/core';
 import React from 'react'
 
 type Props = {}
@@ -28,10 +28,13 @@ export function BioCard({ image, avatar, name, job, stats }: UserCardImageProps)
     ));
   
     return (
+
+        
       <Card withBorder p="xl" radius="md" sx={{
         height: "100%",
         backdropFilter: "saturate(200%) blur(16px) brightness(130%)",
         boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+        width: "15rem"
       }} >
         <Card.Section sx={{ backgroundImage: `url(${image})`, height: 140 }} />
         <Avatar src={avatar} size={200} radius={50} mx="auto" mt={-100} />
@@ -50,11 +53,14 @@ export function BioCard({ image, avatar, name, job, stats }: UserCardImageProps)
           radius="md"
           mt="xl"
           size="md"
-       
-        >
+          
+          >
           Follow
         </Button>
       </Card>
+   
+
+  
     );
   }
   

@@ -7,6 +7,7 @@ import {
     Title,
     useMantineTheme,
   } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
   import { motion } from "framer-motion";
   import React from "react";
   
@@ -14,6 +15,7 @@ import {
   
   function SmGithubSection({}: Props) {
     const theme = useMantineTheme();
+    const narrowView = useMediaQuery("(max-width: 600px)");
     return (
       <>
         <Title
