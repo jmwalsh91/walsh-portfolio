@@ -19,6 +19,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Bio from "../about/Bio";
 import CallToAction from "../about/CallToAction";
+import CodeSample from "../about/CodeSample";
 import GithubSection from "../about/GithubSection";
 import SmGithubSection from "../about/SmGithubSection";
 import { BioCard } from "../cards/BioCard";
@@ -146,7 +147,21 @@ function AboutGrid() {
         <Toolbox />
       </motion.div>
 
-      <Title>Rad stuff</Title>
+      <Title order={3} sx={{
+        marginTop: "10rem",
+      }}>Documentation Nerd</Title>
+      <motion.div
+      style={{
+        borderRadius: "1rem",
+        padding: "1rem",
+        border: "1px solid rgba(132, 59, 206, .4)",
+        boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
+        width: "40rem"
+      }}
+      >
+
+     <CodeSample/>
+      </motion.div>
       {narrowView ? <SmGithubSection /> : <GithubSection />}
       <div style={{ height: "10rem" }}>
         <CallToAction />
