@@ -2,6 +2,7 @@ import { Title, useMantineTheme } from '@mantine/core'
 import { motion } from 'framer-motion'
 import React from 'react'
 import { BioCard } from '../cards/BioCard'
+import { ProfileCard } from '../cards/ProfileCard'
 import Surface from '../Surface'
 
 
@@ -73,7 +74,7 @@ function Bio({}: Props) {
 
             Hola señorx,
     </Title>
-    <BioCard
+    <ProfileCard
               image={
                 "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
               }
