@@ -25,7 +25,7 @@ export default function AppShellDemo({children}: any) {
   const [opened, setOpened] = useState(false);
   return (
     <AppShell
-    fixed={false}
+    fixed={true}
       styles={{
         main: {
           background: 'rgb(19,17,28)',

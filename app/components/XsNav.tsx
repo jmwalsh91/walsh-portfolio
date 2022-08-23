@@ -1,6 +1,9 @@
-import { Button, Container, Drawer, Footer, Group, Stack, Text } from '@mantine/core'
-import { IconMailOpened } from '@tabler/icons'
+import { Button, Container, Drawer, Footer, Group, Stack, Text, useMantineTheme } from '@mantine/core'
+import { Link } from '@remix-run/react'
+import { IconBrandGithub, IconMailOpened } from '@tabler/icons'
 import React from 'react'
+import ExternalLinkButton from './buttons/ExternalLink'
+import Nav from './Nav'
 
 type Props = {
  opened: boolean,
@@ -8,6 +11,7 @@ type Props = {
 }
 
 function XsNav({opened, setOpened}: Props) {
+  const theme = useMantineTheme()
   return (
     <>
     <Drawer
@@ -22,11 +26,51 @@ function XsNav({opened, setOpened}: Props) {
     <Stack justify="space-around" sx={{
         height: "100vh"
     }}>
- 
 <Container>
 
-    <Text size={'xl'}>Github</Text>
-    <Text size={'xl'}>LinkedIn</Text>
+
+
+    <Button component='a' href="https://github.com/jmwalsh91" variant="outline" size={'xl'} sx={{
+      textDecoration: 'none',
+    borderRadius: theme.radius.md,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.white,
+    opacity: 0.85,
+    padding: ".5rem"
+    }}>
+      <IconBrandGithub/>
+      GitHub</Button>
+      <Button component='a' href="https://github.com/jmwalsh91" variant="outline" size={'xl'} sx={{
+      textDecoration: 'none',
+    borderRadius: theme.radius.md,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.white,
+    opacity: 0.85,
+    padding: ".5rem"
+    }}>
+      <IconBrandGithub/>
+      LinkedIn</Button>
+      <Button component='a' href="https://github.com/jmwalsh91" variant="outline" size={'xl'} sx={{
+      textDecoration: 'none',
+    borderRadius: theme.radius.md,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.white,
+    opacity: 0.85,
+    padding: ".5rem"
+    }}>
+      <IconBrandGithub/>
+      Resume</Button>
+      <ExternalLinkButton icon={IconBrandGithub} label="Github" url="https://github.com/jmwalsh91" />
+    <Text size={'xl'}>
+      Resume</Text>
+
+  
     <Text size={'xl'}>Resume</Text>
 </Container>
  

@@ -58,4 +58,8 @@ export const theme: MantineThemeOverride = {
     },
     primaryColor: 'primary',
     primaryShade: 5,
+    defaultGradient: {
+      from: '#001620',
+      to: '#001c0b',
+    },
 }

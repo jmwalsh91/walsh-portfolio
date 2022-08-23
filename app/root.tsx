@@ -15,18 +15,18 @@ import FontLoader from "./utils/loaders/FontLoader";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Walsh Portfolio",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" style={{overflow: "none"}}>
       <head>
         <Meta />
         <Links />
       </head>
-      <body style={{ overflowY: "hidden" }}>
+      <body style={{ overflow: "none" }}>
         <MantineTheme>
           <Shell>
             <Outlet />
@@ -121,9 +121,15 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
           },
           primaryColor: "primary",
           primaryShade: 5,
+          fontFamily: "Inter",
+          headings: { 
+            fontFamily: "Inter Black",
+            fontWeight: 900,
+          }
         }}
         withNormalizeCSS
         withGlobalStyles
+        
       >
         <Shell fixed position={{ top: 0, left: 0 }}>
           <Outlet />

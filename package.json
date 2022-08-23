@@ -8,10 +8,11 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@mantine/core": "5.0.2",
-    "@mantine/hooks": "5.0.2",
-    "@mantine/remix": "^5.0.2",
-    "@mantine/ssr": "^5.0.2",
+    "@mantine/core": "5.2",
+    "@mantine/hooks": "5.2",
+    "@mantine/prism": "^5.2.3",
+    "@mantine/remix": "^5.2",
+    "@mantine/ssr": "^5.2",
     "@remix-run/node": "^1.6.5",
     "@remix-run/react": "^1.6.5",
     "@remix-run/vercel": "^1.6.5",
