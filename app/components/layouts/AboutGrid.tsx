@@ -125,7 +125,7 @@ function AboutGrid() {
         </Grid.Col>
       </Grid>
                 <RecentWork/>
-      <motion.div
+   {/*    <motion.div
         initial={{
           opacity: 0,
           
@@ -147,9 +147,9 @@ function AboutGrid() {
         }}
         >
         <Toolbox />
-      </motion.div>
+      </motion.div> */}
 
-      <Title order={3} sx={{
+{/*       <Title order={3} sx={{
         marginTop: "10rem",
       }}>Documentation Nerd</Title>
       <motion.div
@@ -163,7 +163,7 @@ function AboutGrid() {
       >
 
      <CodeSample/>
-      </motion.div>
+      </motion.div> */}
       {narrowView ? <SmGithubSection /> : <GithubSection />}
       <div style={{ height: "10rem" }}>
         <CallToAction />

@@ -9,7 +9,7 @@ type Props = {}
 function RecentWork({}: Props) {
     const theme = useMantineTheme()
   return (
-    <>
+
     <motion.div
     initial={{
         opacity: 0,
@@ -28,6 +28,7 @@ function RecentWork({}: Props) {
     }}
     style={{
         maxWidth: "95vw",
+        marginTop: "5rem",
         borderRadius: "1rem",
         padding: "1rem",
         border: `1px solid ${theme.colors.secondary[5]}`,
@@ -51,7 +52,7 @@ function RecentWork({}: Props) {
             }>
                 <Text size="lg" align="justify">
 
-                API and database for an accountant at a leading company in the NFT gaming industry. Utilized Typescript, Prisma, Docker and PostgreSQL to deliver an extendable, scalable, and type-safe solution with robust documentation for multiple endpoints and data topologies.
+                API and database for an accountant at a leading company in the NFT gaming industry. Utilized Typescript, Prisma, Docker and PostgreSQL to deliver an extendable, scalable, and type-safe solution with robust documentation for multiple endpoints and data shapes.
                 </Text>
             </List.Item>
             </Grid.Col>
@@ -72,7 +73,7 @@ function RecentWork({}: Props) {
         </List>
 
         </motion.div>
-             </>
+  
   )
 }
 

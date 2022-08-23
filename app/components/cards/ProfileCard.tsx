@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Card, CardSection, createStyles, Group, Paper, Text, Title, useMantineTheme } from '@mantine/core';
+import { Avatar, Box, Button, Card, CardSection, createStyles, Group, Image, Paper, Text, Title, useMantineTheme } from '@mantine/core';
 import React from 'react'
 import { theme } from '~/styles/theme';
 
@@ -23,8 +23,9 @@ const theme = useMantineTheme();
 
    
 
-
-       <Avatar src={avatar} size={220} radius={220} />
+      <><Image src={avatar} alt="avatar" radius="xl" sx={{
+        maxWidth: "35rem"
+      }} />{/* <Avatar src={avatar} size={220} radius={20} /> */}</>
 
 
 
