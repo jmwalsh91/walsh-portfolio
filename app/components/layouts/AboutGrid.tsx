@@ -25,6 +25,7 @@ import SmGithubSection from "../about/SmGithubSection";
 import { BioCard } from "../cards/BioCard";
 import Headshot from "../cards/Headshot";
 import { LeadingProject } from "../cards/LeadingProject";
+import RecentWork from "../cards/RecentWork";
 import RoleCards from "../cards/RoleCard";
 import { SmallBio } from "../cards/SmallBio";
 import ToolAccordion from "../lists/ToolAccordion";
@@ -118,15 +119,16 @@ function AboutGrid() {
                 description="API development with Node and Typescript. JSDOC/TSDOC for documentation. Leverages Docker to quickly implement and iterate on backend systems to meet data and UI requirements."
                 icon={<IconMicroscope />}
                 gradient={{ deg: 17, from: "blue", to: "lime" }}
-              />
+                />
             </Grid.Col>
           </Grid>
         </Grid.Col>
       </Grid>
+                <RecentWork/>
       <motion.div
         initial={{
           opacity: 0,
-
+          
           marginRight: "0",
         }}
         whileInView={{
@@ -143,7 +145,7 @@ function AboutGrid() {
           marginTop: "10rem",
           width: "85vw"
         }}
-      >
+        >
         <Toolbox />
       </motion.div>
 

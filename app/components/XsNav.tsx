@@ -3,6 +3,7 @@ import { Link } from '@remix-run/react'
 import { IconBrandGithub, IconMailOpened } from '@tabler/icons'
 import React from 'react'
 import ExternalLinkButton from './buttons/ExternalLink'
+import Nav from './Nav'
 
 type Props = {
  opened: boolean,
@@ -25,10 +26,11 @@ function XsNav({opened, setOpened}: Props) {
     <Stack justify="space-around" sx={{
         height: "100vh"
     }}>
- 
 <Container>
 
-    <Button component='a' href="https://github.com/jmwalsh91" size={'xl'} sx={{
+
+
+    <Button component='a' href="https://github.com/jmwalsh91" variant="outline" size={'xl'} sx={{
       textDecoration: 'none',
     borderRadius: theme.radius.md,
     display: 'flex',
@@ -40,9 +42,33 @@ function XsNav({opened, setOpened}: Props) {
     }}>
       <IconBrandGithub/>
       GitHub</Button>
+      <Button component='a' href="https://github.com/jmwalsh91" variant="outline" size={'xl'} sx={{
+      textDecoration: 'none',
+    borderRadius: theme.radius.md,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.white,
+    opacity: 0.85,
+    padding: ".5rem"
+    }}>
+      <IconBrandGithub/>
+      LinkedIn</Button>
+      <Button component='a' href="https://github.com/jmwalsh91" variant="outline" size={'xl'} sx={{
+      textDecoration: 'none',
+    borderRadius: theme.radius.md,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.white,
+    opacity: 0.85,
+    padding: ".5rem"
+    }}>
+      <IconBrandGithub/>
+      Resume</Button>
       <ExternalLinkButton icon={IconBrandGithub} label="Github" url="https://github.com/jmwalsh91" />
     <Text size={'xl'}>
-      LinkedIn</Text>
+      Resume</Text>
 
   
     <Text size={'xl'}>Resume</Text>

@@ -1,4 +1,4 @@
-import { Grid, Title, useMantineTheme, Text } from '@mantine/core'
+import { Grid, Title, useMantineTheme, Text, Space } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { motion } from 'framer-motion'
 import React from 'react'
@@ -6,7 +6,7 @@ import { BioCard } from '../cards/BioCard'
 import { ProfileCard } from '../cards/ProfileCard'
 import { SmallBio } from '../cards/SmallBio'
 import Surface from '../Surface'
-
+import bgImage from 'public/assets/grid_0.png'
 
 type Props = {}
 
@@ -16,11 +16,11 @@ function Bio({}: Props) {
   return (
     <>
     <Grid>
-    <Grid.Col  xs={12} sm={5}>
+    <Grid.Col  xs={12} sm={3}>
     
     <ProfileCard
               image={
-                  "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
+                  bgImage
                 }
                 avatar={
                     "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
@@ -31,9 +31,8 @@ function Bio({}: Props) {
                 />
 
 
-
     </Grid.Col>
-      <Grid.Col xs={12} sm={7}>
+      <Grid.Col xs={12} sm={9}>
     <motion.div
     initial={{
         opacity: 0,
@@ -69,11 +68,14 @@ function Bio({}: Props) {
               phone={"(405) 479 3668"}
               email={"jordan@jmwalsh.dev"}
             /> : null}
-    <Title>
+    <Title align="end">
 
            Hey there, I'm Jordan.
     </Title>
-<Text size="xl"> I'm a software developer living off-grid in a house I built in the high desert of Northern New Mexico. When I'm not building applications, I'm often building stuff hammer-and-nail, playing chess, making music, playing with my dogs, or reading.</Text>
+    <Space h="lg"/>
+<Text size="xl" align="justify"> I'm a software developer living off-grid in a house I built in the high desert of Northern New Mexico. When I'm not building applications or otherwise interfacing with software-related thingamajigs, I'm often building with hammer and nail, playing chess, making music, playing with my dogs, or reading.</Text>
+<Space h="lg"/>
+<Text size="xl" align="justify">I'm interested in hearing about opportunities involving any and every "part of the stack," but I have a particular passion for React and the parts of the application closest to the user. </Text>
 
 <Text></Text>
 
