@@ -15,6 +15,7 @@ import {
 } from '@tabler/icons';
 import { NavLink, useNavigate } from '@remix-run/react';
 import { useMediaQuery } from '@mantine/hooks';
+import NavLgMenu from './NavLgMenu';
 
 
 const useStyles = createStyles((theme) => ({
@@ -133,9 +134,10 @@ export default function Nav() {
            
             )}
           </NavLink>
+          <NavLgMenu/> 
         </Stack>
       </Navbar.Section>
-  
+      
       </MediaQuery>
   
 
