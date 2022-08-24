@@ -1,24 +1,47 @@
-import { Button, Menu, Text, useMantineTheme } from '@mantine/core'
+import { Button, createStyles, Menu, Text, useMantineTheme } from '@mantine/core'
 import { IconArrowsLeftRight, IconBookDownload, IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandMastodon, IconBriefcase, IconExternalLink } from '@tabler/icons'
 import React from 'react'
 import CopyEmail from './buttons/CopyEmail'
 
 type Props = {}
+const useStyles = createStyles((theme) => ({
+    link: {
+      width: '4rem',
+      height: '4rem',
+      borderRadius: theme.radius.md,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: theme.white,
+      opacity: 0.85,
+        
+  
+      '&:hover': {
+        opacity: 1,
+        backgroundColor: theme.colors.secondary[5],
+      },
+    }
+}));
 
 function NavLgMenu({}: Props) {
     const theme = useMantineTheme()
+    const {classes, cx} = useStyles()
   return (
     <Menu position="right-start" shadow="md" width={200}>
     <Menu.Target>
-      <Button sx={{
+      <Button
+      className={cx(classes.link)}
+      variant="subtle"
+      
+      sx={{
         width: '4rem',
         height: '4rem',
         borderRadius: theme.radius.md,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.white,
         opacity: 0.85,
+        
       }}><Text>
         <IconExternalLink/>
         </Text>

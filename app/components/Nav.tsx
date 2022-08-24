@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer, MediaQuery } from '@mantine/core';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer, MediaQuery, Container, Space, Box } from '@mantine/core';
 import {
   TablerIcon,
   IconHome2,
@@ -131,10 +131,17 @@ export default function Nav() {
             icon={IconPencil}
             label="Blog"
               />
-           
+      
             )}
+            
           </NavLink>
+  <Box sx={{
+    justifyItems: 'end'
+  }}>
+
           <NavLgMenu/> 
+  </Box>
+
         </Stack>
       </Navbar.Section>
       
