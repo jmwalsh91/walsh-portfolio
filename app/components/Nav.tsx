@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer, MediaQuery, Container, Space, Box } from '@mantine/core';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, Footer, MediaQuery, Container, Space, Box, Text} from '@mantine/core';
 import {
   TablerIcon,
   IconHome2,
@@ -24,6 +24,7 @@ const useStyles = createStyles((theme) => ({
     height: '4rem',
     borderRadius: theme.radius.md,
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     color: theme.white,
@@ -31,25 +32,19 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       opacity: 1,
-      backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.colors.indigo[5] }).background,
-        0.1
-      ),
+      backgroundColor: theme.colors.primary[7]
     },
   },
 
   active: {
     opacity: 1,
     '&, &:hover': {
-      backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.colors.secondary[5] }).background,
-        0.15
-      ),
+      color: theme.colors.success[5]
     },
   },
 }));
 
-interface NavbarLinkProps {
+export interface NavbarLinkProps {
   icon: TablerIcon;
   label: string;
   active?: boolean;
@@ -62,12 +57,16 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
     <Tooltip label={label} position="right" transitionDuration={0}>
       <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
         <Icon stroke={1.5} />
+       
+        <Text>
+          {label}
+          </Text>
       </UnstyledButton>
     </Tooltip>
   );
 }
 
-const pages = [
+export const pages = [
   { icon: IconHome2, label: 'Home' },
   { icon: IconDeviceDesktopAnalytics, label: 'Projects' },
   { icon: IconPencil, label: 'blog'},
@@ -104,7 +103,9 @@ export default function Nav() {
     <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
       <Navbar.Section mt={50}>
         <Stack justify="center" spacing={0}>
-        <NavLink to="/">
+        <NavLink to="/" style={{
+          textDecoration: "none",
+        }}>
             {({ isActive }) => (
               <NavbarLink
             active={isActive}
@@ -114,7 +115,9 @@ export default function Nav() {
            
             )}
           </NavLink>
-          <NavLink to="/projects">
+          <NavLink to="/projects" style={{
+            textDecoration: "none",
+          }}>
             {({ isActive }) => (
               <NavbarLink
             active={isActive}
@@ -124,7 +127,9 @@ export default function Nav() {
            
             )}
           </NavLink>
-          <NavLink to="/blog">
+          <NavLink to="/blog" style={{
+            textDecoration: "none",
+          }}>
             {({ isActive }) => (
               <NavbarLink
             active={isActive}
