@@ -1,6 +1,7 @@
-import { Button, createStyles, Menu, Text, UnstyledButton, useMantineTheme } from '@mantine/core'
-import { IconArrowsLeftRight, IconBookDownload, IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandMastodon, IconBriefcase, IconExternalLink } from '@tabler/icons'
+import { Button, createStyles, Divider, Menu, Text, UnstyledButton, useMantineTheme } from '@mantine/core'
+import { IconArrowsLeftRight, IconBookDownload, IconBrandDiscord, IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandMastodon, IconBriefcase, IconExternalLink } from '@tabler/icons'
 import React from 'react'
+import CopyDiscord from './buttons/CopyDiscord'
 import CopyEmail from './buttons/CopyEmail'
 
 type Props = {}
@@ -56,19 +57,28 @@ More
 
     <Menu.Dropdown>
       <Menu.Label>Social</Menu.Label>
-      <Menu.Item icon={<IconBrandGithub size={14} />}>Github</Menu.Item>
-      <Menu.Item icon={<IconBrandLinkedin size={14} />}>LinkedIn</Menu.Item>
-      <Menu.Item icon={<IconBrandMastodon size={14} />}>Mastodon</Menu.Item>
+      <Menu.Item icon={<IconBrandGithub size={14} aria-label="Jordan's Github" />}>Github</Menu.Item>
+      <Menu.Item icon={<IconBrandLinkedin size={14}  aria-label="Jordan's LinkedIn"/>}>LinkedIn</Menu.Item>
+      <Menu.Item icon={<IconBrandDiscord size={14}  aria-label=""/>}>Mastodon</Menu.Item>
 
       <Menu.Divider />
       <Menu.Label>Resources</Menu.Label>
 
-      <Menu.Item icon={<IconBookDownload size={14} />}>Resume</Menu.Item>
-      <Menu.Item icon={<IconBriefcase size={14} />}>Doc Kit</Menu.Item>
-  
-      <Menu.Item
+      <Menu.Item component='a' style={{
+        textDecoration: "none"}} download href="/docs/WalshResume.pdf " icon={<IconBookDownload size={14}  aria-label="Jordan's Resume"/>}>Resume</Menu.Item>
+      <Menu.Item component='a' style={{
+        textDecoration: "none"}} download href="/docs/WalshCVKit.pdf " icon={<IconBriefcase size={14}  aria-label="Jordan's Resume and other resources"/>}>Doc Kit</Menu.Item>
+  <Menu.Divider/>
+      <Menu.Item sx={{
+        alignItems: 'start',
+        justifyContent: 'start',
+      }} aria-label="Copy email address to clipboard"
       >
         <CopyEmail/>
+      </Menu.Item>
+      <Menu.Item aria-label="Copy discord tag to clipboard"
+      >
+        <CopyDiscord/>
       </Menu.Item>
     </Menu.Dropdown>
   </Menu>

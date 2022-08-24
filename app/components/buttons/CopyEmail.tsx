@@ -12,7 +12,9 @@ function CopyEmail({}: Props) {
   return (
     <CopyButton value="jordan@jmwalsh.dev">
       {({ copied, copy }) => (
-        <Button variant="subtle" color={copied ? theme.colors.success[5] : theme.colors.primary[5]} onClick={copy}>
+        <Button variant="subtle" sx={{
+
+        }} color={copied ? theme.colors.success[5] : theme.colors.primary[5]} onClick={copy}>
             
           {copied ?<IconClipboardCheck size={20}/> : <IconClipboardCopy size={20}/>}
           {copied ? 'Copied Email!' : 'Copy Email'}

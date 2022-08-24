@@ -54,15 +54,13 @@ export interface NavbarLinkProps {
 function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   const { classes, cx } = useStyles();
   return (
-    <Tooltip label={label} position="right" transitionDuration={0}>
-      <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
+ 
+      <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })} aria-label={label}>
         <Icon stroke={1.5} />
-       
         <Text>
           {label}
           </Text>
       </UnstyledButton>
-    </Tooltip>
   );
 }
 
