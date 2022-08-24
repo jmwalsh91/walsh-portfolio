@@ -1,37 +1,21 @@
 import {
-  Center,
   Container,
   Divider,
   Grid,
-  Group,
-  MediaQuery,
-  SimpleGrid,
-  Skeleton,
-  Stack,
-  Text,
   Title,
   useMantineTheme,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
-import { motion } from "framer-motion";
-import React from "react";
 import Bio from "../about/Bio";
-import CallToAction from "../about/CallToAction";
-import CodeSample from "../about/CodeSample";
+
 import GithubSection from "../about/GithubSection";
 import SmGithubSection from "../about/SmGithubSection";
-import { BioCard } from "../cards/BioCard";
-import Headshot from "../cards/Headshot";
-import { LeadingProject } from "../cards/LeadingProject";
+
 import RecentWork from "../cards/RecentWork";
 import RoleCards from "../cards/RoleCard";
-import { SmallBio } from "../cards/SmallBio";
-import ToolAccordion from "../lists/ToolAccordion";
-import Toolbox from "../lists/Toolbox";
-import Surface from "../Surface";
-import { Top } from "../Top";
+
 
 function AboutGrid() {
   const theme = useMantineTheme();
@@ -44,7 +28,7 @@ function AboutGrid() {
       sx={{
         height: "400vh",
         width: "80vw",
-        maxWidth: "80rem",
+        maxWidth: "70rem",
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
@@ -53,7 +37,7 @@ function AboutGrid() {
       <Grid
         sx={{
           width: "100%",
-          marginTop: "10vh",
+marginTop: "2rem"
         }}
       >
         <Grid.Col xs={12} md={12}>
@@ -165,9 +149,9 @@ function AboutGrid() {
      <CodeSample/>
       </motion.div> */}
       {narrowView ? <SmGithubSection /> : <GithubSection />}
-      <div style={{ height: "10rem" }}>
+     {/*  <div style={{ height: "10rem" }}>
         <CallToAction />
-      </div>
+      </div> */}
     </Container>
   );
 }

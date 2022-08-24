@@ -16,7 +16,7 @@ function Bio({}: Props) {
   return (
     <>
     <Grid>
-    <Grid.Col  xs={12} sm={4}>
+    <Grid.Col  xs={12} sm={5} md={5}>
     {narrowView ? 
     null: 
     <ProfileCard
@@ -33,7 +33,7 @@ function Bio({}: Props) {
 
 }
     </Grid.Col>
-      <Grid.Col xs={12} sm={8}>
+      <Grid.Col xs={12} sm={12} md={7}>
     <motion.div
     initial={{
         opacity: 0,
@@ -77,9 +77,9 @@ function Bio({}: Props) {
     </Title>
               </Group>
     <Space h="lg"/>
-<Text size="xl" align="justify"> I'm a <Mark>software developer</Mark>  living off-grid in a house I built in the high desert of Northern New Mexico. When I'm not building applications or otherwise interfacing with software-related thingamajigs, I'm often building with hammer and nail, playing chess, making music, playing with my dogs, or reading.</Text>
+<Text size="lg" align="justify"> I'm a <Mark>software developer</Mark>  living off-grid in a house I built in the high desert of Northern New Mexico. When I'm not building applications or otherwise interfacing with software-related thingamajigs, I'm often building with hammer and nail, playing chess, making music, playing with my dogs, or reading.</Text>
 <Space h="lg"/>
-<Text size="xl" align="justify"><Mark>I'm interested in hearing about opportunities involving any and every "part of the stack," but I have a particular passion for <Mark color={theme.colors.primary[4]}>React</Mark> and the parts of the application closest to the user.</Mark> </Text>
+<Text size="lg" align="justify"><Mark>I'm interested in hearing about opportunities involving any and every "part of the stack," but I have a particular passion for <Mark color={theme.colors.primary[4]}>React</Mark> and the parts of the application closest to the user.</Mark> </Text>
 
 <Text></Text>
 

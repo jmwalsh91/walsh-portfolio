@@ -125,7 +125,9 @@ export default function Nav() {
            
             )}
           </NavLink>
-          <NavLink to="/blog" style={{
+         {/*  <NavLink to="/blog"
+            
+                style={{
             textDecoration: "none",
           }}>
             {({ isActive }) => (
@@ -133,11 +135,12 @@ export default function Nav() {
             active={isActive}
             icon={IconPencil}
             label="Blog"
+       
               />
       
             )}
             
-          </NavLink>
+          </NavLink> */}
   <Box sx={{
     justifyItems: 'end'
   }}>

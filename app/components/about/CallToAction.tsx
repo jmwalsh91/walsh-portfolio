@@ -16,7 +16,7 @@ function CallToAction({}: Props) {
         width: '100%',
         marginTop: '10vh'
     }}>
-    <Text sx={{
+    {/* <Text sx={{
         fontFamily: theme.headings.fontFamily,
         fontSize: "1rem"
     }}>
@@ -26,7 +26,7 @@ You enter life itself as though walking on to a screen.
  You slip on your own life like a data suit. 
 -Baudrillard, "The Mental Diaspora of the Networks"
 
-        </Text>
+        </Text> */}
     <Title order={3}>Let's chat!</Title>
         <Box 
         draggable
