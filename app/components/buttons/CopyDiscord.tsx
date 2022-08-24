@@ -15,7 +15,7 @@ function CopyDiscord({}: Props) {
         <Button variant="subtle" color={copied ? theme.colors.success[5] : theme.colors.primary[5]} onClick={copy}>
             
           {copied ?<IconClipboardCheck size={20}/> : <IconBrandDiscord size={20}/>}
-          {copied ? 'Copied Discord Tag' : 'Copy Discord Tag'}
+          {copied ? 'Copied Discord Id' : 'Copy Discord Id'}
         </Button>
       )}
     </CopyButton>

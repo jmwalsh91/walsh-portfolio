@@ -1,28 +1,27 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   AppShell,
-  Navbar,
-  Header,
-  Footer,
-  Aside,
-  Text,
   MediaQuery,
   Burger,
   useMantineTheme,
-  AspectRatio,
   ScrollArea,
   Center,
+
 } from '@mantine/core';
 
-import bg from '~/assets/CloudBG.jpg'
-import { Link } from '@remix-run/react';
 import Nav from './Nav';
 import { useMediaQuery } from '@mantine/hooks';
 import XsNav from './XsNav';
+
+
+
+
 export default function AppShellDemo({children}: any) {
   const theme = useMantineTheme();
   const notPhone = useMediaQuery('(min-width: 900px)')
   const [opened, setOpened] = useState(false);
+  
+
   return (
     <AppShell
     fixed={true}
@@ -42,16 +41,16 @@ export default function AppShellDemo({children}: any) {
       }
       header={
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-          <div>
+      <div>
         <Burger
           opened={opened}
           onClick={() => setOpened((o) => !o)}
           size="lg"
-          color={theme.colors.gray[6]}
-          mr="xl"
-          mt=".5rem"
+          color={theme.colors.primary[3]}
+          m="sm"
           />
         <XsNav opened={opened} setOpened={setOpened}/>
+    
           </div>
       </MediaQuery>
       }

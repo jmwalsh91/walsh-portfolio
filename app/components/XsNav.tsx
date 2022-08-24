@@ -16,6 +16,7 @@ import {
 } from "@mantine/core";
 import { Link, NavLink, useNavigate } from "@remix-run/react";
 import {
+  IconBlockquote,
   IconBookDownload,
   IconBrandGithub,
   IconBrandGmail,
@@ -23,14 +24,16 @@ import {
   IconBrandMastodon,
   IconBriefcase,
   IconDeviceDesktopAnalytics,
+  IconDeviceLaptop,
   IconHome2,
   IconMailOpened,
   IconPencil,
 } from "@tabler/icons";
 import React, { useState } from "react";
+import CopyDiscord from "./buttons/CopyDiscord";
 import CopyEmail from "./buttons/CopyEmail";
 import ExternalLinkButton from "./buttons/ExternalLink";
-import Nav, { NavbarLink, NavbarLinkProps, pages } from "./Nav";
+import Nav, { NavbarLinkProps, pages } from "./Nav";
 
 type Props = {
   opened: boolean;
@@ -63,14 +66,8 @@ const useStyles = createStyles((theme) => ({
     opacity: 1,
     "&, &:hover": {
       textDecoration: "none",
-      backgroundColor: theme.fn.lighten(
-        theme.fn.variant({
-       
-          variant: "filled",
-          color: theme.colors.secondary[5],
-        }).background,
-        0.15
-      ),
+      backgroundColor: 
+     theme.colors.primary[7],
     },
   },
 }));
@@ -114,7 +111,7 @@ export default function XsNav({ opened, setOpened }: Props) {
         opened={opened}
         onClose={() => setOpened(false)}
         title="Navigation"
-        padding="xl"
+        padding="lg"
         size="xs"
       >
         <NavLink to="/" style={{
@@ -132,7 +129,7 @@ export default function XsNav({ opened, setOpened }: Props) {
           {({ isActive }) => (
             <SmNavbarLink
               active={isActive}
-              icon={IconDeviceDesktopAnalytics}
+              icon={IconDeviceLaptop}
               label="Projects"
             />
           )}
@@ -142,11 +139,11 @@ export default function XsNav({ opened, setOpened }: Props) {
           textDecoration: "none"
         }}>
           {({ isActive }) => (
-            <SmNavbarLink active={isActive} icon={IconPencil} label="Blog" />
+            <SmNavbarLink active={isActive} icon={IconBlockquote} label="Blog" />
           )}
         </NavLink>
 <Divider/> 
-        <Text>Social</Text>
+        <Text>Links</Text>
         <Button
           variant="subtle"
           size="lg"
@@ -157,24 +154,33 @@ export default function XsNav({ opened, setOpened }: Props) {
         >
           <IconBrandGithub size={20} /> Github
         </Button>
-        <Button variant="subtle" size="lg">
+        <Button variant="subtle"
+          size="lg"
+          component="a"
+          href="https://linkedin.com/in/jmwalshdev"
+          target="_blank"
+          rel="noopener noreferrer">
           <IconBrandLinkedin size={20} /> LinkedIn
         </Button>
-        <Button variant="subtle" size="lg">
-          <IconBrandMastodon size={20} /> Mastodon
-        </Button>
+   <Space h="lg" />
 
-        <CopyEmail />
 
         <Divider />
-        <Text>Resources</Text>
+        <Text>Downloads</Text>
 
-        <Button variant="subtle" size="lg">
+        <Button variant="subtle" size="lg" component='a' style={{
+          textDecoration: "none"}} download href="/docs/WalshResume.pdf ">
           <IconBookDownload size={20} /> Resume
         </Button>
-        <Button variant="subtle" size="lg">
-          <IconBriefcase size={20} /> Doc Kit
+        <Button variant="subtle" size="lg" component='a' style={{
+          textDecoration: "none"}} download href="/docs/WalshCVKit.pdf ">
+          <IconBriefcase size={20} /> CV + Recs
         </Button>
+        <Space h={"lg"}/>
+        <Divider/>
+        <Text>Contact</Text>
+<CopyEmail />
+<CopyDiscord/>
       </Drawer>
       <Group position="center"></Group>
     </>
