@@ -1,4 +1,5 @@
 import {
+  Box,
   Center,
   Container,
   Divider,
@@ -21,6 +22,7 @@ import Bio from "../about/Bio";
 import CallToAction from "../about/CallToAction";
 import CodeSample from "../about/CodeSample";
 import GithubSection from "../about/GithubSection";
+import { SlotteredHero } from "../about/SlottedHero";
 import SmGithubSection from "../about/SmGithubSection";
 import { BioCard } from "../cards/BioCard";
 import Headshot from "../cards/Headshot";
@@ -79,8 +81,8 @@ function AboutGrid() {
               job={"UI Engineer"}
               stats={[]}
             />
-          )} */}
-          <Bio/>
+            )} */}
+         <SlotteredHero slot1={<Bio/>}/>
         </Grid.Col>
     
         <Grid.Col span={12}>
@@ -168,6 +170,7 @@ function AboutGrid() {
       <div style={{ height: "10rem" }}>
         <CallToAction />
       </div>
+     
     </Container>
   );
 }
