@@ -76,7 +76,7 @@ profileContainer: {
     slot1: React.ReactNode
     slot2?: React.ReactNode
 } */
-export function SlotteredHero({}) {
+export function SlottedHero({}) {
   const { classes } = useStyles();
   const theme = useMantineTheme()
   const narrowView = useMediaQuery('(max-width: 768px)')

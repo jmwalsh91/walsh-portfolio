@@ -60,7 +60,7 @@ import {
           <Image
             src="https://github-readme-streak-stats.herokuapp.com/?user=jmwalsh91&amp;theme=react&amp;hide_border=false"
             alt="Shows total contribution, current amount of days in a row where a contribution took place, and the length of the longest streak."
-            width="16rem"
+            width="16rem" height="100%"
           />
     
         </motion.div>

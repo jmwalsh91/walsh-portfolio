@@ -65,7 +65,7 @@ export default function App() {
 <meta name="msapplication-TileColor" content="#da532c"/>
 <meta name="theme-color" content="#ffffff"></meta>
       </head>
-      <body style={{ overflow: "none", scrollbarWidth: "none" }}>
+      <body style={{ overflow: "hidden", scrollbarWidth: "none" }}>
         <MantineTheme>
           <Shell>
             <Outlet />

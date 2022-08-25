@@ -13,7 +13,7 @@ import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
 
 import GithubSection from "../about/GithubSection";
 import ProjectHighlight from "../about/ProjectHighlight";
-import { SlotteredHero } from "../about/SlottedHero";
+import { SlottedHero } from "../about/SlottedHero";
 import SmGithubSection from "../about/SmGithubSection";
 
 import RecentWork from "../cards/RecentWork";
@@ -28,12 +28,12 @@ function AboutGrid() {
 
   return (
     <Container
-      fluid
-      my="md"
-      sx={{
-        alignItems: "center",
-        display: "flex",
-        flexDirection: "column",
+    my="md"
+    sx={{
+      alignItems: "center",
+      display: "flex",
+      flexDirection: "column",
+      maxWidth: "90vw"
       }}
     >
       <Grid
@@ -43,7 +43,7 @@ function AboutGrid() {
         }}
       >
         <Grid.Col xs={12} md={12}>
-         <SlotteredHero/>
+         <SlottedHero/>
         </Grid.Col>
     
         <Grid.Col span={12}>
