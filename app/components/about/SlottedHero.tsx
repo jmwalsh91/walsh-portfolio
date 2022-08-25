@@ -1,4 +1,4 @@
-import { createStyles, Overlay, Container, Title, Button, Text, Center, Group, Space, Mark, useMantineTheme, Image, Grid } from '@mantine/core';
+import { createStyles, Overlay, Container, Title, Button, Text, Center, Group, Space, Mark, useMantineTheme, Image, Grid, Avatar } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 import { ProfileCard } from '../cards/ProfileCard';
@@ -22,19 +22,22 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: theme.spacing.xl * 3,
     zIndex: 1,
     position: 'relative',
-
+    [theme.fn.smallerThan('xs')]: {
+        paddingBottom: theme.spacing.xl,
+      },
     
   },
 
   title: {
     color: theme.white,
-    fontSize: '3rem',
+    fontSize: '2rem',
     fontWeight: 900,
     lineHeight: 1.1,
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('md')]: {
       fontSize: '1.5rem',
       lineHeight: 1.2,
+      wordBreak: 'break-word',
     },
 
     [theme.fn.smallerThan('xs')]: {
@@ -147,15 +150,9 @@ export function SlotteredHero({}) {
         
       <Group>
  
-  {narrowView? <SmallBio
-              avatar={
-                  "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/public/profile1.jpg"
-                }
-                name={"Jordan Walsh"}
-                title={"Software Developer"}
-                
-                email={"jordan@jmwalsh.dev"}
-                /> : 
+  {narrowView? <Avatar src={"https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/public/profile1.jpg"} size={116} radius={100} sx={{margin: "0 auto", border: `3px solid ${theme.colors.primary[5]}`, boxShadow: `${theme.colors.primary[6]} 0px 4px 20px 0px` }} />
+              
+               : 
                 
                 null}
             

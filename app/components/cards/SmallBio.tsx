@@ -25,8 +25,8 @@ export function SmallBio({ avatar, name, title, email }: UserInfoIconsProps) {
     return (
       <div>
         <Group noWrap>
-          <Avatar src={avatar} size={116} radius="md" />
-        {/*   <div>
+          <Avatar src={avatar} size={116} radius={100} sx={{alignSelf: "center"}} />
+           <div>
             <Text size="lg" weight={500} className={classes.name}>
               {name}
             </Text>
@@ -45,7 +45,7 @@ export function SmallBio({ avatar, name, title, email }: UserInfoIconsProps) {
             <Group noWrap spacing={10} mt={5}>
               <IconBrandLinkedin>LinkedIn</IconBrandLinkedin>
             </Group>
-          </div> */}
+          </div> 
         </Group>
       </div>
     );
