@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
   hero: {
     position: 'relative',
     backgroundImage:
-      `url('https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/synthmesamidpng.webp?t=2022-08-24T23%3A04%3A02.937Z')` ,
+      `url('/assets/pics/synthmesa.webp')` ,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAlt: 'SynthMesa',
