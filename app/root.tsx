@@ -38,8 +38,6 @@ export const meta: MetaFunction = () => {
   "og:url" : "https://jmwalsh.dev",
   "og:type" : "website",
   "og:title" : "Walsh Portfolio",
-  "og:description" : "Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities.",
-  "og:image" : "/assets/pics/ogimg.webp",
   "twitter:card" : "summary_large_image",
 "twitter:domain" : "jmwalsh.dev",
  "twitter:url" : "https://jmwalsh.dev",
@@ -64,6 +62,8 @@ export default function App() {
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
 <meta name="msapplication-TileColor" content="#da532c"/>
 <meta name="theme-color" content="#ffffff"></meta>
+<meta name="image" property="og:image" content="/assets/pics/ogimg.webp"/>
+<meta name="description" property="og:description" content="Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities!"/>
       </head>
       <body style={{ overflow: "hidden", scrollbarWidth: "none" }}>
         <MantineTheme>
