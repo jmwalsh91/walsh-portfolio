@@ -60,7 +60,7 @@ export default function AppShellDemo({children}: any) {
         overflow: 'none'}}
         >
 
-  <ScrollArea sx={{height: '100vh', width: "90vw"}}>
+  <ScrollArea sx={{height: '100vh', width: "90vw", scrollBehavior: "smooth", overflow: "none"}}>
 
 
 <Center>

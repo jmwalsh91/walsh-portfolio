@@ -1,4 +1,5 @@
 import {
+  Affix,
   Container,
   Divider,
   Grid,
@@ -93,48 +94,9 @@ function AboutGrid() {
       </Grid>
                 <RecentWork/>
                 <ProjectHighlight/>
-   {/*    <motion.div
-        initial={{
-          opacity: 0,
-          
-          marginRight: "0",
-        }}
-        whileInView={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.4,
-        }}
-        style={{
-          borderRadius: "1rem",
-          padding: "1rem",
-          border: "1px solid rgba(132, 59, 206, .4)",
-          boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-          marginTop: "10rem",
-          width: "85vw"
-        }}
-        >
-        <Toolbox />
-      </motion.div> */}
-
-{/*       <Title order={3} sx={{
-        marginTop: "10rem",
-      }}>Documentation Nerd</Title>
-      <motion.div
-      style={{
-        borderRadius: "1rem",
-        padding: "1rem",
-        border: "1px solid rgba(132, 59, 206, .4)",
-        boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-        width: "40rem"
-      }}
-      >
-
-     <CodeSample/>
-      </motion.div> */}
       {narrowView ? <SmGithubSection /> : <GithubSection />}
-      <div style={{ height: "10rem" }}>
-        <CallToAction />
+      <div style={{ height: "15rem" }}>
+       {/* <Affix position={{ bottom: 5, right: 10}}> <CallToAction /> </Affix> */}
       </div>
      
     </Container>
