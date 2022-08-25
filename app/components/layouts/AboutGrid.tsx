@@ -13,6 +13,7 @@ import Bio from "../about/Bio";
 import CallToAction from "../about/CallToAction";
 import CodeSample from "../about/CodeSample";
 import GithubSection from "../about/GithubSection";
+import ProjectHighlight from "../about/ProjectHighlight";
 import { SlotteredHero } from "../about/SlottedHero";
 import SmGithubSection from "../about/SmGithubSection";
 
@@ -91,6 +92,7 @@ function AboutGrid() {
         </Grid.Col>
       </Grid>
                 <RecentWork/>
+                <ProjectHighlight/>
    {/*    <motion.div
         initial={{
           opacity: 0,
