@@ -1,5 +1,4 @@
 import {
-  Affix,
   Container,
   Divider,
   Grid,
@@ -38,7 +37,7 @@ function AboutGrid() {
     >
       <Grid
         sx={{
-          width: "100%",
+          maxWidth: "70rem",
           marginTop: "1.2rem"
         }}
       >

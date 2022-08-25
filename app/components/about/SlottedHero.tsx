@@ -1,9 +1,7 @@
 import { createStyles, Overlay, Container, Title, Button, Text, Center, Group, Space, Mark, useMantineTheme, Image, Grid, Avatar } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { motion } from 'framer-motion';
-import { ProfileCard } from '../cards/ProfileCard';
-import { SmallBio } from '../cards/SmallBio';
-import SynthMesa from 'public/assets/pics/synthmesa.webp'
+
 const useStyles = createStyles((theme) => ({
   hero: {
     position: 'relative',

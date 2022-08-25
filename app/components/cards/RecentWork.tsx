@@ -27,7 +27,7 @@ function RecentWork({}: Props) {
         boxShadow: `${theme.colors.success[5]} 0px 4px 10px 0px`,
     }}
     style={{
-        maxWidth: "80vw",
+        maxWidth: "60rem",
         marginTop: "5rem",
         borderRadius: "1rem",
         padding: "1rem",
