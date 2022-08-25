@@ -1,37 +1,26 @@
 import {
-  Center,
+  Affix,
   Container,
   Divider,
   Grid,
-  Group,
-  MediaQuery,
-  SimpleGrid,
-  Skeleton,
-  Stack,
-  Text,
   Title,
   useMantineTheme,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
-import { motion } from "framer-motion";
-import React from "react";
-import Bio from "../about/Bio";
-import CallToAction from "../about/CallToAction";
-import CodeSample from "../about/CodeSample";
+
+
 import GithubSection from "../about/GithubSection";
+import ProjectHighlight from "../about/ProjectHighlight";
+import { SlotteredHero } from "../about/SlottedHero";
 import SmGithubSection from "../about/SmGithubSection";
-import { BioCard } from "../cards/BioCard";
-import Headshot from "../cards/Headshot";
-import { LeadingProject } from "../cards/LeadingProject";
+
 import RecentWork from "../cards/RecentWork";
 import RoleCards from "../cards/RoleCard";
-import { SmallBio } from "../cards/SmallBio";
-import ToolAccordion from "../lists/ToolAccordion";
-import Toolbox from "../lists/Toolbox";
-import Surface from "../Surface";
-import { Top } from "../Top";
+
+
+
 
 function AboutGrid() {
   const theme = useMantineTheme();
@@ -42,9 +31,6 @@ function AboutGrid() {
       fluid
       my="md"
       sx={{
-        height: "400vh",
-        width: "80vw",
-        maxWidth: "80rem",
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
@@ -53,34 +39,11 @@ function AboutGrid() {
       <Grid
         sx={{
           width: "100%",
-          marginTop: "10vh",
+          marginTop: "1.2rem"
         }}
       >
         <Grid.Col xs={12} md={12}>
-          {/* {narrowView ? (
-            <SmallBio
-              avatar={
-                "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
-              }
-              name={"Jordan Walsh"}
-              title={"Software Developer"}
-              phone={"(405) 479 3668"}
-              email={"jordan@jmwalsh.dev"}
-            />
-          ) : (
-            <BioCard
-              image={
-                "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
-              }
-              avatar={
-                "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
-              }
-              name={"Jordan Walsh"}
-              job={"UI Engineer"}
-              stats={[]}
-            />
-          )} */}
-          <Bio/>
+         <SlotteredHero/>
         </Grid.Col>
     
         <Grid.Col span={12}>
@@ -125,49 +88,12 @@ function AboutGrid() {
         </Grid.Col>
       </Grid>
                 <RecentWork/>
-   {/*    <motion.div
-        initial={{
-          opacity: 0,
-          
-          marginRight: "0",
-        }}
-        whileInView={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.4,
-        }}
-        style={{
-          borderRadius: "1rem",
-          padding: "1rem",
-          border: "1px solid rgba(132, 59, 206, .4)",
-          boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-          marginTop: "10rem",
-          width: "85vw"
-        }}
-        >
-        <Toolbox />
-      </motion.div> */}
-
-{/*       <Title order={3} sx={{
-        marginTop: "10rem",
-      }}>Documentation Nerd</Title>
-      <motion.div
-      style={{
-        borderRadius: "1rem",
-        padding: "1rem",
-        border: "1px solid rgba(132, 59, 206, .4)",
-        boxShadow: "rgba(132, 59, 206, 0.15) 0px 4px 24px 0px",
-        width: "40rem"
-      }}
-      >
-
-     <CodeSample/>
-      </motion.div> */}
+                <ProjectHighlight/>
       {narrowView ? <SmGithubSection /> : <GithubSection />}
-      <div style={{ height: "10rem" }}>
-        <CallToAction />
+      <div style={{ minHeight: "10rem" }}>
+       {/* <Affix position={{ bottom: 5, right: 10}}> <CallToAction /> </Affix> */}
       </div>
+     
     </Container>
   );
 }

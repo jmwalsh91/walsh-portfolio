@@ -26,7 +26,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body style={{ overflow: "none" }}>
+      <body style={{ overflow: "none", scrollbarWidth: "none" }}>
         <MantineTheme>
           <Shell>
             <Outlet />
@@ -131,9 +131,7 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
         withGlobalStyles
         
       >
-        <Shell fixed position={{ top: 0, left: 0 }}>
-          <Outlet />
-        </Shell>
+        {children}
       </MantineProvider>
     </ColorSchemeProvider>
   );
