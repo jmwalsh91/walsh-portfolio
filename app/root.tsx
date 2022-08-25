@@ -62,7 +62,7 @@ export default function App() {
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
 <meta name="msapplication-TileColor" content="#da532c"/>
 <meta name="theme-color" content="#ffffff"></meta>
-<meta name="image" property="og:image" content="https://www.jmwalsh.dev/assets/pics/ogimg.webp"/>
+<meta name="image" property="og:image" content="https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/ogimageportfolio.png?t=2022-08-25T21%3A18%3A13.970Z"/>
 
 <meta name="description" property="og:description" content="Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities!"/>
       </head>
