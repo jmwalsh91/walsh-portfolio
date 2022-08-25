@@ -1,15 +1,7 @@
 import {
-  Box,
-  Center,
   Container,
   Divider,
   Grid,
-  Group,
-  MediaQuery,
-  SimpleGrid,
-  Skeleton,
-  Stack,
-  Text,
   Title,
   useMantineTheme,
 } from "@mantine/core";
@@ -17,23 +9,18 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
 import { motion } from "framer-motion";
-import React from "react";
 import Bio from "../about/Bio";
 import CallToAction from "../about/CallToAction";
 import CodeSample from "../about/CodeSample";
 import GithubSection from "../about/GithubSection";
 import { SlotteredHero } from "../about/SlottedHero";
 import SmGithubSection from "../about/SmGithubSection";
-import { BioCard } from "../cards/BioCard";
-import Headshot from "../cards/Headshot";
-import { LeadingProject } from "../cards/LeadingProject";
+
 import RecentWork from "../cards/RecentWork";
 import RoleCards from "../cards/RoleCard";
-import { SmallBio } from "../cards/SmallBio";
-import ToolAccordion from "../lists/ToolAccordion";
+
 import Toolbox from "../lists/Toolbox";
-import Surface from "../Surface";
-import { Top } from "../Top";
+
 
 function AboutGrid() {
   const theme = useMantineTheme();
@@ -46,7 +33,7 @@ function AboutGrid() {
       sx={{
         height: "400vh",
         width: "80vw",
-        maxWidth: "80rem",
+        maxWidth: "90rem",
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
@@ -55,34 +42,11 @@ function AboutGrid() {
       <Grid
         sx={{
           width: "100%",
-          marginTop: "10vh",
+          marginTop: "1.2rem"
         }}
       >
         <Grid.Col xs={12} md={12}>
-          {/* {narrowView ? (
-            <SmallBio
-              avatar={
-                "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
-              }
-              name={"Jordan Walsh"}
-              title={"Software Developer"}
-              phone={"(405) 479 3668"}
-              email={"jordan@jmwalsh.dev"}
-            />
-          ) : (
-            <BioCard
-              image={
-                "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
-              }
-              avatar={
-                "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profile2crop.jpg?t=2022-08-05T03%3A46%3A56.547Z"
-              }
-              name={"Jordan Walsh"}
-              job={"UI Engineer"}
-              stats={[]}
-            />
-            )} */}
-         <SlotteredHero slot1={<Bio/>}/>
+         <SlotteredHero/>
         </Grid.Col>
     
         <Grid.Col span={12}>
