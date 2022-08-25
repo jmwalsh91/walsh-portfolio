@@ -1,21 +1,29 @@
 import {
-  Button,
-  Code,
-  Group,
-  Image,
-  Text,
+  createStyles,
+  Image,  
   Title,
   useMantineTheme,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
 import { motion } from "framer-motion";
-import React from "react";
+
 
 type Props = {};
+const useStyles = createStyles((theme) => ({
+  container : {
+  [theme.fn.smallerThan('xl')]: {
+    width: '50rem'
+  },
+  [theme.fn.smallerThan('lg')]: {
+    width: '30rem'
+  },
+},
 
+
+}));
 function GithubSection({}: Props) {
   const theme = useMantineTheme();
-  const narrowView = useMediaQuery("(max-width: 600px)");
+  const { classes } = useStyles();
+
   return (
     <>
       <Title
@@ -43,15 +51,17 @@ function GithubSection({}: Props) {
         }}
         style={{
           maxWidth: "60rem",
-          width: narrowView? "18rem": "40rem",
+       
           borderRadius: "1rem",
           padding: "1rem",
           border: `1px solid ${theme.colors.primary[5]}`,
           boxShadow: `${theme.colors.primary[8]} 0px 4px 24px 0px`,
           display: "flex",
           flexDirection: "column",
+          marginBottom: "5rem",
 
         }}
+        className={classes.container}
       >
         <motion.div
         initial={{

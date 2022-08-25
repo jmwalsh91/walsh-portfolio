@@ -9,10 +9,8 @@ import {
 import { useMediaQuery } from "@mantine/hooks";
 
 import { IconAccessible, IconLeaf, IconMicroscope } from "@tabler/icons";
-import { motion } from "framer-motion";
-import Bio from "../about/Bio";
-import CallToAction from "../about/CallToAction";
-import CodeSample from "../about/CodeSample";
+
+
 import GithubSection from "../about/GithubSection";
 import ProjectHighlight from "../about/ProjectHighlight";
 import { SlotteredHero } from "../about/SlottedHero";
@@ -21,7 +19,7 @@ import SmGithubSection from "../about/SmGithubSection";
 import RecentWork from "../cards/RecentWork";
 import RoleCards from "../cards/RoleCard";
 
-import Toolbox from "../lists/Toolbox";
+
 
 
 function AboutGrid() {
@@ -33,9 +31,6 @@ function AboutGrid() {
       fluid
       my="md"
       sx={{
-        height: "400vh",
-        width: "80vw",
-        maxWidth: "90rem",
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
@@ -95,7 +90,7 @@ function AboutGrid() {
                 <RecentWork/>
                 <ProjectHighlight/>
       {narrowView ? <SmGithubSection /> : <GithubSection />}
-      <div style={{ height: "15rem" }}>
+      <div style={{ minHeight: "10rem" }}>
        {/* <Affix position={{ bottom: 5, right: 10}}> <CallToAction /> </Affix> */}
       </div>
      

@@ -131,9 +131,7 @@ function MantineTheme({ children }: { children: React.ReactNode }) {
         withGlobalStyles
         
       >
-        <Shell fixed position={{ top: 0, left: 0 }}>
-          <Outlet />
-        </Shell>
+        {children}
       </MantineProvider>
     </ColorSchemeProvider>
   );

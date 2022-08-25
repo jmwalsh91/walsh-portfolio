@@ -19,7 +19,7 @@ function RecentWork({}: Props) {
         border: `1px solid ${theme.colors.secondary[5]}`,
     }}
     transition={{
-        duration: .3,
+        duration: 3,
         type: "spring",
     }}
     whileHover={{
@@ -27,7 +27,7 @@ function RecentWork({}: Props) {
         boxShadow: `${theme.colors.success[5]} 0px 4px 10px 0px`,
     }}
     style={{
-        maxWidth: "95vw",
+        maxWidth: "70rem",
         marginTop: "5rem",
         borderRadius: "1rem",
         padding: "1rem",

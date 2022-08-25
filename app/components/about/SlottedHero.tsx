@@ -150,7 +150,7 @@ export function SlotteredHero({}) {
         
       <Group>
  
-  {narrowView? <Avatar src={"https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/public/profile1.jpg"} size={116} radius={100} sx={{margin: "0 auto", border: `3px solid ${theme.colors.primary[5]}`, boxShadow: `${theme.colors.primary[6]} 0px 4px 20px 0px` }} />
+  {narrowView? <Avatar src={"https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/public/profile1.jpg"} size={116} radius={100} sx={{margin: "0 auto", border: `3px solid ${theme.colors.primary[5]}`, boxShadow: `${theme.colors.primary[6]} 0px 4px 20px 0px` }} alt="Profile Picture of Jordan Walsh" />
               
                : 
                 
