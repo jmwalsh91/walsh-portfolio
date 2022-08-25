@@ -11,6 +11,7 @@ const useStyles = createStyles((theme) => ({
       `url('https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/synthmesamidpng.webp?t=2022-08-24T23%3A04%3A02.937Z')` ,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundAlt: 'SynthMesa',
   },
 
   container: {
@@ -83,7 +84,7 @@ export function SlottedHero({}) {
 
 
   return (
-    <div className={classes.hero}>
+    <div role="img" aria-label="Hero Section" className={classes.hero}>
       <Overlay
         gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, .25) 40%)"
         opacity={1}
@@ -109,11 +110,12 @@ export function SlottedHero({}) {
         }}>
 
         <Image src={
-            "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profileSmall.webp?t=2022-08-24T23%3A26%3A11.961Z"
+            "/assets/pics/profileSmallestLossy.webp"
         }
         height={280}
         radius={theme.radius.md}
         className={classes.profile}
+        alt="Picture of Jordan"
         
         />
         </motion.div>

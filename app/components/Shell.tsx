@@ -42,7 +42,7 @@ export default function Shell({children}: any) {
       <div>
         <Burger
         aria-label='Menu'
-        aria-controls='navbar'
+        role="menu"
           opened={opened}
           onClick={() => setOpened((o) => !o)}
           size="lg"
