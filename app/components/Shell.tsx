@@ -41,6 +41,8 @@ export default function Shell({children}: any) {
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
       <div>
         <Burger
+        aria-label='Menu'
+        role="menu"
           opened={opened}
           onClick={() => setOpened((o) => !o)}
           size="lg"
@@ -58,7 +60,7 @@ export default function Shell({children}: any) {
 
 <Container fluid >
 
-  <ScrollArea sx={{height: '100vh'}}>
+  <ScrollArea type="hover" sx={{height: '100vh'}} mx="-lg" >
 <Center>
 
      {children}

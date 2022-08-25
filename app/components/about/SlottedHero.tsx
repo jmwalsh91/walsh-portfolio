@@ -1,16 +1,15 @@
 import { createStyles, Overlay, Container, Title, Button, Text, Center, Group, Space, Mark, useMantineTheme, Image, Grid, Avatar } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { motion } from 'framer-motion';
-import { ProfileCard } from '../cards/ProfileCard';
-import { SmallBio } from '../cards/SmallBio';
-import SynthMesa from 'public/assets/pics/synthmesa.webp'
+
 const useStyles = createStyles((theme) => ({
   hero: {
     position: 'relative',
     backgroundImage:
-      `url('https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/synthmesamidpng.webp?t=2022-08-24T23%3A04%3A02.937Z')` ,
+      `url('/assets/pics/synthmesa.webp')` ,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundAlt: 'SynthMesa',
   },
 
   container: {
@@ -76,14 +75,14 @@ profileContainer: {
     slot1: React.ReactNode
     slot2?: React.ReactNode
 } */
-export function SlotteredHero({}) {
+export function SlottedHero({}) {
   const { classes } = useStyles();
   const theme = useMantineTheme()
   const narrowView = useMediaQuery('(max-width: 768px)')
 
 
   return (
-    <div className={classes.hero}>
+    <div role="img" aria-label="Hero Section" className={classes.hero}>
       <Overlay
         gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, .25) 40%)"
         opacity={1}
@@ -109,11 +108,12 @@ export function SlotteredHero({}) {
         }}>
 
         <Image src={
-            "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/profileSmall.webp?t=2022-08-24T23%3A26%3A11.961Z"
+            "/assets/pics/profileSmallestLossy.webp"
         }
         height={280}
         radius={theme.radius.md}
         className={classes.profile}
+        alt="Picture of Jordan"
         
         />
         </motion.div>

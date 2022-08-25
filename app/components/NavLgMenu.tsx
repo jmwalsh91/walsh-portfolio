@@ -49,13 +49,16 @@ function NavLgMenu({}: Props) {
   return (
     <Menu
       position="right-start"
-      trigger="hover"
+
+
       openDelay={100}
       closeDelay={500}
       closeOnEscape
       closeOnItemClick={false}
       shadow="md"
       width={200}
+      aria-label="Menu with links, resume, and contact info"
+     
     >
       <Menu.Target>
         <UnstyledButton

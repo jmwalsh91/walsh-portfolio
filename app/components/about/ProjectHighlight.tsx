@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion'
-import { Divider, Text, Grid, List, Space, ThemeIcon, Title, useMantineTheme, Paper, Container, Stack, Group } from '@mantine/core'
-import { IconArrowBigUpLines, IconCircleDashed, IconDeviceDesktopAnalytics, IconSchema, IconSchool } from '@tabler/icons'
+import { Divider, Text, Grid, Space, ThemeIcon, Title, useMantineTheme, Paper, Container, Stack, Group } from '@mantine/core'
+import { IconArrowBigUpLines,  IconDeviceDesktopAnalytics,  IconSchool } from '@tabler/icons'
 import CopyEmail from '../buttons/CopyEmail'
 import CopyDiscord from '../buttons/CopyDiscord'
 
@@ -28,7 +28,7 @@ function RecentWork({}: Props) {
         boxShadow: `${theme.colors.success[5]} 0px 4px 10px 0px`,
     }}
     style={{
-        maxWidth: "70rem",
+        maxWidth: "60rem",
         marginTop: "5rem",
         borderRadius: "1rem",
         padding: "1rem",
@@ -38,7 +38,7 @@ function RecentWork({}: Props) {
         flexDirection: "column",
     }}
     >
-                <Title align="start" ml={"1.5rem"}>Current Projects</Title>
+                <Title order={2} align="start" ml={"1.5rem"}>Current Projects</Title>
                 <Divider mx="1.3rem" />
                 <Space h="md"/>
 
