@@ -13,11 +13,42 @@ import { useState } from "react";
 import Shell from "./components/Shell";
 import FontLoader from "./utils/loaders/FontLoader";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
+export const meta: MetaFunction = () => {
+  const description = `Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities.`
+  return {
+    viewport: "width=device-width,initial-scale=1",
+    charset: "utf-8",
   title: "Walsh Portfolio",
-  viewport: "width=device-width,initial-scale=1",
-});
+  description,
+  keywords: [
+    "web",
+    "developer",
+    "react",
+    "typescript",
+    "javascript",
+    "node",
+    "UI Engineer",
+    "React",
+    "Freelance",
+    "Full-Stack",
+    "Contractor",
+    "Web3",
+    "Design",
+  ],
+  "og:url" : "https://jmwalsh.dev",
+  "og:type" : "website",
+  "og:title" : "Walsh Portfolio",
+  "og:description" : "Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities.",
+  "og:image" : "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/ogportfolio.webp?t=2022-08-25T18%3A14%3A28.860Z",
+  "twitter:card" : "summary_large_image",
+"twitter:domain" : "jmwalsh.dev",
+ "twitter:url" : "https://jmwalsh.dev",
+  "twitter:title" : "Walsh Portfolio",
+  "twitter:description" : "Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities.",
+  "twitter:image" : "https://qkdyjypdpruelatqkwbh.supabase.co/storage/v1/object/public/portfolio/ogportfolio.webp?t=2022-08-25T18%3A14%3A28.860Z",
+  }
+};
+
 
 export default function App() {
   return (
