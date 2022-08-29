@@ -134,14 +134,14 @@ export default function XsNav({ opened, setOpened }: Props) {
             />
           )}
         </NavLink>
-        <NavLink to="/blog"
+       {/*  <NavLink to="/blog"
         style={{
           textDecoration: "none"
         }}>
           {({ isActive }) => (
             <SmNavbarLink active={isActive} icon={IconBlockquote} label="Blog" />
           )}
-        </NavLink>
+        </NavLink> */}
 <Divider/> 
         <Text>Links</Text>
         <Button
