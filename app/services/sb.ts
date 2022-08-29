@@ -32,7 +32,9 @@ export type Post = {
     description: string,
     stack_badges: string[],
     rich_text?: string,
-    views?: number
+    views?: number,
+    live_url?: string,
+    repo_url?: string,
   }
   /**
    * Types for Supabase responses
