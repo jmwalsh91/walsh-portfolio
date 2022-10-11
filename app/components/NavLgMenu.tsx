@@ -20,6 +20,7 @@ import {
   IconExternalLink,
 } from "@tabler/icons";
 import React from "react";
+import { plausible } from "~/root";
 import CopyDiscord from "./buttons/CopyDiscord";
 import CopyEmail from "./buttons/CopyEmail";
 
@@ -124,6 +125,7 @@ function NavLgMenu({}: Props) {
           }}
           download
           href="/docs/WalshResume.pdf "
+          onClick={() => plausible.trackEvent("Resume")}
           icon={<IconBookDownload size={14} aria-label="Jordan's Resume" />}
         >
           Resume
@@ -135,6 +137,7 @@ function NavLgMenu({}: Props) {
           }}
           download
           href="/docs/WalshCVKit.pdf "
+          onClick={() => plausible.trackEvent("CV Kit")}
           icon={
             <IconBriefcase
               size={14}
