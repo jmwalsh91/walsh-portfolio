@@ -12,6 +12,12 @@ import {
 import { useState } from "react";
 import Shell from "./components/Shell";
 import FontLoader from "./utils/loaders/FontLoader";
+import Plausible from 'plausible-tracker'
+
+export const plausible = Plausible({
+  domain: 'jmwalsh.dev',
+  hashMode: true,
+})
 
 export const meta: MetaFunction = () => {
   const description = `Jordan Walsh is a full-stack web developer with a passion for building clean, performant, and accessible web applications with React and Typescript. Get in touch to collaborate or discuss opportunities.`
@@ -54,7 +60,7 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <script defer data-domain="jmwalsh.dev" src="https://plausible.io/js/plausible.js"></script>
+       
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
